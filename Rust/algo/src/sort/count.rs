@@ -1,10 +1,5 @@
 pub fn counting_sort(arr: &mut [usize]) {
-    let mut max = arr[0];
-    for val in arr.iter() {
-        if max < *val {
-            max = *val;
-        }
-    }
+    let max = arr.iter().max().unwrap();
 
     let mut temp = Vec::new();
     temp.resize(max + 1, 0);
