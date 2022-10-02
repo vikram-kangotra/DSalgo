@@ -5,6 +5,7 @@ pub mod search;
 mod tests {
     use crate::search::binary::binary_search;
     use crate::sort::bubble::bubble_sort;
+    use crate::sort::count::counting_sort;
     use crate::sort::selection::selection_sort;
     use crate::sort::insertion::insertion_sort;
 
@@ -28,7 +29,14 @@ mod tests {
         insertion_sort(&mut arr);
         assert_eq!(arr, [2,3,4,5,6,7,7,8]);
     }
-
+    
+    #[test]
+    fn count() {
+        let mut arr = [4,6,7,5,8,7,3,2];
+        counting_sort(&mut arr);
+        assert_eq!(arr, [2,3,4,5,6,7,7,8]);
+    
+    }
     #[test]
     fn binary() {
         let arr = [2,3,4,5,6,7,7,8];
