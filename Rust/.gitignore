@@ -1,2 +1,5 @@
 algo/target
 algo/Cargo.lock
+
+ds/target
+ds/Cargo.lock
