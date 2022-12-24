@@ -1,9 +1,18 @@
 mod vector;
+mod array;
 
 #[cfg(test)]
 mod tests {
     
     use crate::vector::Vector;
+    use crate::array::rotate::rotate;
+
+    #[test]
+    fn test_rotate() {
+        let mut arr = [1, 2, 3, 4, 5, 6, 7];
+        rotate(&mut arr, 3);
+        assert_eq!(arr, [5, 6, 7, 1, 2, 3, 4]);
+    }
 
     #[test]
     fn vector() {
