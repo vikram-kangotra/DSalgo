@@ -4,6 +4,7 @@ mod array;
 #[cfg(test)]
 mod tests {
     
+    use crate::array::majority::majority_element;
     use crate::vector::Vector;
     use crate::array::rotate::rotate;
 
@@ -12,6 +13,12 @@ mod tests {
         let mut arr = [1, 2, 3, 4, 5, 6, 7];
         rotate(&mut arr, 3);
         assert_eq!(arr, [5, 6, 7, 1, 2, 3, 4]);
+    }
+
+    #[test]
+    fn test_majority() {
+        let mut arr = [1, 2, 1, 4, 5, 1, 1];
+        assert_eq!(majority_element(&mut arr), 1);
     }
 
     #[test]
