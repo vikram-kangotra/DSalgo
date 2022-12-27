@@ -1,4 +1,6 @@
-#include "sort.hpp"
+#include "bubble.hpp"
+#include "insertion.hpp"
+#include "selection.hpp"
 #include <iostream>
 template <class T>
 void displayArray(std::vector<T> arr)
@@ -10,13 +12,13 @@ void displayArray(std::vector<T> arr)
 int main()
 {
     std::vector<int> vect1 = {6,3,6,2,5};
-    Sort<int> SortingBy;
-    displayArray(SortingBy.BubbleSort(vect1));
+    
+    displayArray(BubbleSort<int>(vect1));
    
     std::vector<int > vect2 = {4,3,0,2,9}; 
-    displayArray(SortingBy.SelectionSort(vect2));
+    displayArray(SelectionSort(vect2));
     
     std::vector<int > vect3 = {5,4,3,2,1}; 
-    displayArray(SortingBy.SelectionSort(vect3));
+    displayArray(SelectionSort(vect3));
     return 0;;
 }
