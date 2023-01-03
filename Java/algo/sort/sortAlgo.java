@@ -24,7 +24,7 @@ public class sortAlgo {
     // O(n^2)  Does less memory writes compared to Quicksort, Mergesort, Insertion sort etc
     // But cycle sort is optimal in memory write terms. Basic idea for heap sort. Not stable. In place
 
-    public static  void selection_sort(int[] arr){
+    public static void selection_sort(int[] arr){
         int min_index;
          for (int i = 0 ; i < arr.length -1 ; i++){
              min_index = i;
