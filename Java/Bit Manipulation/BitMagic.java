@@ -133,12 +133,44 @@ public class BitMagic {
         }
         return x;
     }
+    // This can also be done recursively:
+
+//    public int add(int x, int y){
+//            int keep = (x & y) << 1;
+//            res = x ^ y;
+//            if (keep == 0) return res;
+//        return add(keep,res);
+//    }
 
     // Add one to a number (using the fact ~x = - (x +1)
 
     public int addOne(int x){
         return (-(~x));
     }
+
+    // Subtract two numbers without using Arithmetic operators:
+
+    public int subtract(int x , int y){
+        while (y > 0) {
+            int carry = (~x) & y;
+            x = x ^ y;
+            y = carry << 1;
+        }
+        return x;
+    }
+
+    // This can also be done recursively:
+     /*
+    public int subtract(int x, int y)
+    {
+
+        if (y == 0)
+            return x;
+
+        return subtract(x ^ y, (~x & y) << 1);
+    }
+
+      */
 
     // Turn off the rightmost set bit
 
@@ -243,6 +275,58 @@ public class BitMagic {
         return new String(a);
     }
 
+    // Java implementation to toggle bits in  the given range
 
+    public int toggleBitsFromLToR(int n, int L, int R){
+        int res = n;
+        for (int i = L; i <= R; i++) {
+            // Set bit
+            if ((n & (1 << (i - 1))) != 0) {
+
+                // XOR will set 0 to already set
+                // bits(a^a=0)
+                res = res ^ (1 << (i - 1));
+            }
+            // unset bits
+            else {
+                // OR will set'0'bits to 1
+                res = res | (1 << (i - 1));
+            }
+        }
+        return res;
+    }
+
+    // Java implementation to find the largest number with n set and m unset bits
+
+    public int largeNumWithNSetAndMUnsetBits(int n, int m){
+        int num = (1 << (n + m)) - 1;
+        int temp = (1 << m) - 1;
+        return (num ^ temp);
+    }
+
+    //Function to swap adjacent bits of a given number
+
+    /*
+
+    The idea is to separate bits present at even positions with bits present at odd positions using mask 0xAAAAAAAA and 0x55555555, respectively.
+    Mask 0xAAAAAAAA has all its even bits set, and its bitwise AND with n will separate bits present at even positions in n.
+    Similarly, mask 0x55555555 has all its odd bits set, and its bitwise AND with n will separate bits present at odd positions in n.
+     */
+    public int swapAdjacentBits(int n) {
+        return (((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1));
+    }
+
+
+    public int toggleAllEvenBits(int n){
+        int numOfBits = 1 + (int)(Math.log(n) / Math.log(2));
+        int mask = 0xAAAAAAAA & ((1 << numOfBits) - 1);
+        return n ^ mask;
+    }
+
+    public int toggleAllOddBits(int n){
+        int numOfBits = 1 + (int)(Math.log(n) / Math.log(2));
+        int mask = 0x55555555 & ((1 << numOfBits) - 1);
+        return n ^ mask;
+    }
 
 }
