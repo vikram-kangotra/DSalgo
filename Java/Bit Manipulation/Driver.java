@@ -12,5 +12,7 @@
          b.bin(3);
          System.out.println();
          System.out.println(b.decimalToBinary(4.47,3));
+         System.out.println(b.largeNumWithNSetAndMUnsetBits(4,1));
+         System.out.println(b.toggleAllOddBits(10));
      }
 }
