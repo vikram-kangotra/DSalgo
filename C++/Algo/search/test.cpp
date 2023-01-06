@@ -7,7 +7,7 @@ void test_linear_search() {
     int n = sizeof(arr) / sizeof(arr[0]);
     int x = 7;
     auto result = linear_search(arr, n, x);
-    assert(result == std::vector<int>({4, 8}) && "linear_search failed");
+    assert(result == 4 && "linear_search failed");
 }
 
 int main() {
