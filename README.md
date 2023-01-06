@@ -18,7 +18,6 @@ A repository of almost all Data Structures and Algorithm in different programmin
     - Counting Sort
     - Bucket Sort
     - Bubble Sort
-    - Bubble Sort
     - Radix Sort
     - Shell Sort
     - Comb Sort
