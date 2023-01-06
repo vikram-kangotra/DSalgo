@@ -2,7 +2,7 @@
 ### Copy this file into any new folder that is created for implementation of Data Structures and Algorithms in new language.
 The checkbox needs to be checked after adding any DS or A in the respective folders.
 
-#### Algorithms
+## Algorithms
 - [] Searching
     - [] Binary Search
     - [] Linear Search
@@ -68,7 +68,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Zipper
     - [] Five Balltree Construction Algo
     - [] Cuckoo Hashing
-#### Data Structures
+## Data Structures
 - [] Arrays
     - [] Array
     - [] Bit array
