@@ -4,7 +4,7 @@
 // is only able to sort a vector of comparable 
 // elements
 template <class T>
-std::vector<T> BubbleSort(std::vector<T>& arr){
+std::vector<T> bubbleSort(std::vector<T>& arr){
     int n = arr.size();
     for(int i=n-1; i>0; i--)
     {
