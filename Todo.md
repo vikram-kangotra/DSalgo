@@ -19,7 +19,6 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Counting Sort
     - [] Bucket Sort
     - [] Bubble Sort
-    - [] Bubble Sort
     - [] Radix Sort
     - [] Shell Sort
     - [] Comb Sort
