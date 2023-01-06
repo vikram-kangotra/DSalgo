@@ -1,6 +1,3 @@
-#include <iostream>
-using namespace std;
-
 void insertionSort(int arr[], int n)
 {
     for(int i=1; i<n; i++)
@@ -18,16 +15,3 @@ void insertionSort(int arr[], int n)
         arr[prev+1] = current;
     }
 }
-
-int main()
-{
-    int arr[]= {7,4,3,6,-9,5};
-    int n = sizeof(arr)/sizeof(int);
-
-    insertionSort(arr, n);
-    for(int i=0; i<n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-}
-Footer
