@@ -11,14 +11,14 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Rabin-Karp Algorithm
     - [] Z Algorithm
 - [] Sorting
-    - [x] Insertion Sort
+    - [X] Insertion Sort
     - [] Heap Sort
-    - [x] Selection Sort
+    - [X] Selection Sort
     - [] Merge Sort
     - [] Quick Sort
-    - [x] Counting Sort
+    - [X] Counting Sort
     - [] Bucket Sort
-    - [x] Bubble Sort
+    - [X] Bubble Sort
     - [] Radix Sort
     - [] Shell Sort
     - [] Comb Sort
