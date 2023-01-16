@@ -4,7 +4,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
 
 ## Algorithms
 - [] Searching
-    - [] Binary Search
+    - [x] Binary Search
     - [x] Linear Search
     - [] Depth First Search
     - [] Breadth First Search
