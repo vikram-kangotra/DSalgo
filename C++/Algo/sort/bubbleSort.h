@@ -16,7 +16,6 @@ std::vector<T> bubbleSort(std::vector<T>& arr){
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
             }
-                
         }
     }
     return arr;
