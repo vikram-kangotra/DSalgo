@@ -1,7 +1,7 @@
 #include <vector>
 
 template <typename T>
-std::vector<T> selectionSort(std::vector<T>& arr){
+void selectionSort(std::vector<T>& arr){
     int min_index;
     for(int i=0; i<arr.size()-1; i++){
         min_index = i;
@@ -17,5 +17,4 @@ std::vector<T> selectionSort(std::vector<T>& arr){
             arr[i] = temp; 
         }
     }
-    return arr;
 }
