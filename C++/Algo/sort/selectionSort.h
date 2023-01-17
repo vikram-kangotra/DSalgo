@@ -1,12 +1,5 @@
 #include <vector>
 
-void swap(int *a, int *b){
-    int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
 template <typename T>
 std::vector<T> selectionSort(std::vector<T>& arr){
     int min_index;
@@ -18,7 +11,10 @@ std::vector<T> selectionSort(std::vector<T>& arr){
             }
         }
         if(min_index != i){
-            swap(&arr[min_index], &arr[i]);
+            int temp ;
+            temp = arr[min_index];
+            arr[min_index] = arr[i];
+            arr[i] = temp; 
         }
     }
     return arr;
