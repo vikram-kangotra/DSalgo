@@ -5,10 +5,12 @@ pub mod search;
 mod tests {
     use crate::search::binary::binary_search;
     use crate::search::linear::linear_search;
+
     use crate::sort::bubble::bubble_sort;
     use crate::sort::count::counting_sort;
     use crate::sort::selection::selection_sort;
     use crate::sort::insertion::insertion_sort; 
+    use crate::sort::merge::merge_sort;
 
     #[test]
     fn bubble() {
@@ -37,6 +39,13 @@ mod tests {
         counting_sort(&mut arr);
         assert_eq!(arr, [2,3,4,5,6,7,7,8]);
     
+    }
+
+    #[test]
+    fn merge() {
+        let mut arr = [4,6,7,5,8,7,3,2];
+        merge_sort(&mut arr);
+        assert_eq!(arr, [2,3,4,5,6,7,7,8]);
     }
 
     #[test]
