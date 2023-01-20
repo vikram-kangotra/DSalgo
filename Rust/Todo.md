@@ -14,7 +14,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [X] Insertion Sort
     - [] Heap Sort
     - [X] Selection Sort
-    - [] Merge Sort
+    - [x] Merge Sort
     - [] Quick Sort
     - [X] Counting Sort
     - [] Bucket Sort
