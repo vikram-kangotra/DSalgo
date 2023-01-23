@@ -4,10 +4,13 @@ pub mod search;
 #[cfg(test)]
 mod tests {
     use crate::search::binary::binary_search;
+    use crate::search::linear::linear_search;
+
     use crate::sort::bubble::bubble_sort;
     use crate::sort::count::counting_sort;
     use crate::sort::selection::selection_sort;
-    use crate::sort::insertion::insertion_sort;
+    use crate::sort::insertion::insertion_sort; 
+    use crate::sort::merge::merge_sort;
 
     #[test]
     fn bubble() {
@@ -37,10 +40,27 @@ mod tests {
         assert_eq!(arr, [2,3,4,5,6,7,7,8]);
     
     }
+
+    #[test]
+    fn merge() {
+        let mut arr = [4,6,7,5,8,7,3,2];
+        merge_sort(&mut arr);
+        assert_eq!(arr, [2,3,4,5,6,7,7,8]);
+    }
+
     #[test]
     fn binary() {
         let arr = [2,3,4,5,6,7,7,8];
-        let index = binary_search(&arr, 6);
+        let index = binary_search(&arr, 6)
+            .expect("6 should be in the array");
+        assert_eq!(index, 4);
+    }
+
+    #[test]
+    fn linear() {
+        let arr = [2,3,4,5,6,7,7,8];
+        let index = linear_search(&arr, &6)
+            .expect("6 should be in the array");
         assert_eq!(index, 4);
     }
 }
