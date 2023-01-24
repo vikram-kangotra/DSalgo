@@ -329,4 +329,5 @@ public class BitMagic {
         return n ^ mask;
     }
 
+
 }
