@@ -244,23 +244,32 @@ public class Problems {
         return res;
     }
 
+
+    
     /*
-     * Maximum sum of subarray
-     * Kadane's algorithm
+     * Minimum group flips to make all elements of binary array same
+     * Print the indices of the element to be flipped
      * Time complexity: O(n)
      * Space complexity: O(1)
      
-     */
+     
+    */
 
-    public int maxSumSubarray(int[] arr) {
-        int maxSum = arr[0];
-        int currSum = arr[0];
+    public void minGroupFlips(int[] arr) {
         for(int i = 1 ; i < arr.length ; i++) {
-            currSum = Math.max(arr[i], currSum + arr[i]);
-            maxSum = Math.max(maxSum, currSum);
+            if(arr[i] != arr[i-1]) {
+                if(arr[i] != arr[0]) {
+                    System.out.print("From " + i + " to ");
+                } else {
+                    System.out.println(i-1);
+                }
+            }
         }
-        return maxSum;
+        if(arr[arr.length-1] != arr[0]) {
+            System.out.println(arr.length-1);
+        }
     }
 
+    
 
 }
