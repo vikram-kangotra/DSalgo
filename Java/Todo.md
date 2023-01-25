@@ -4,8 +4,8 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
 
 ## Algorithms
 - [] Searching
-    - [] Binary Search
-    - [] Linear Search
+    - [x] Binary Search
+    - [x] Linear Search
     - [] Depth First Search
     - [] Breadth First Search
     - [] Rabin-Karp Algorithm
@@ -89,9 +89,9 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Iliffe vector
     - [] Variable-length array
 - [] Lists
-    - [] Doubly linked list
-    - [] Array list
-    - [] Linked list
+    - [x] Doubly linked list
+    - [x] Array list
+    - [x] Linked list
     - [] Association list
     - [] Self-organizing list
     - [] Skip list
