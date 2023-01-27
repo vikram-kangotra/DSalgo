@@ -25,4 +25,15 @@ public class Problems {
         }
         System.out.println("Not Found");
     }
+
+
+    public static void main(String[] args) {
+        int[][] matrix = {{1,2,3,4},
+                          {5,6,7,8},
+                          {9,10,11,12},
+                          {13,14,15,16}};
+        Problems p = new Problems();
+        p.searchInSortedMatrix(matrix, 16);
+        
+    }
 }
