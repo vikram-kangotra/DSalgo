@@ -38,7 +38,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Kosaraju's Algo
     - [] Tarjan's Algo
 - [] Arrays
-    - [] Kadane's Algo
+    - [x] Kadane's Algo
     - [] Floyd's Cycle Detection Algo
     - [] Knuth-Morris-Pratt Algo (KMP)
     - [] Quick Select Algo
@@ -84,7 +84,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Lookup table
     - [] Matrix
     - [] Parallel array
-    - [] Sorted array
+    - [x] Sorted array
     - [] Sparse array
     - [] Iliffe vector
     - [] Variable-length array
