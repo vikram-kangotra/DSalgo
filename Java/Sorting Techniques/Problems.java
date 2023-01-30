@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Problems {
     
     public void intersectionOfTwoSortedArrays(int[] arr1, int[] arr2){
@@ -121,5 +123,82 @@ public class Problems {
         return swaps;
     }
 
+    /*
+     * kth smallest element in an array
+     * using quick select algorithm (Lomuto Partition technique)
+     */
+
+    public int kthSmallest(int[] arr, int k){
+        int l = 0;
+        int r = arr.length - 1;
+        while(l <= r){
+            int p = Sort.lomutoPartitioning(arr, l, r);
+            if(p == k - 1){
+                return arr[p];
+            }else if(p > k - 1){
+                r = p - 1;
+            }else{
+                l = p + 1;
+            }
+        }
+        return -1;
+    }
+
+    /*
+     * kth largest element in an array
+     * using quick select algorithm (Lomuto Partition technique)
+     */
+
+    public int kthLargest(int[] arr, int k){
+        int l = 0;
+        int r = arr.length - 1;
+        while(l <= r){
+            int p = Sort.lomutoPartitioning(arr, l, r);
+            if(p == arr.length - k){
+                return arr[p];
+            }else if(p > arr.length - k){
+                r = p - 1;
+            }else{
+                l = p + 1;
+            }
+        }
+        return -1;
+    }
+
+    /*
+     * Chocolate Distribution Problem
+     * Given an array of n integers where each value represents the number of chocolates in a packet.
+     * Each packet can have a variable number of chocolates. There are m students, the task is to distribute
+     * chocolate packets such that:
+     * 1. Each student gets one packet.
+     * 2. The difference between the number of chocolates in the packet with maximum chocolates and
+     *   packet with minimum chocolates given to the students is minimum.
+     * Time Complexity: O(nlogn)
+     * Space Complexity: O(1) 
+     */
+
+    public int chocolateDistribution(int[] arr, int m){
+        Arrays.sort(arr);
+        int min = Integer.MAX_VALUE;
+        for(int i = 0; i + m - 1 < arr.length; i++){
+            min = Math.min(min, arr[i + m - 1] - arr[i]);
+        }
+        return min;
+    }
+
+    public static void main(String[] args) {
+        
+        Problems p = new Problems();
+        int[] arr1 = {1, 2, 2, 3, 4, 5, 5, 6, 7, 8, 9};
+        int[] arr2 = {2, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10};
+        p.intersectionOfTwoSortedArrays(arr1, arr2);
+        System.out.println();
+        p.unionOfTwoSortedArrays(arr1, arr2);
+        System.out.println();
+        int[] arr = {2, 4, 1, 3, 5};
+        System.out.println(p.countInversion(arr, 0, arr.length - 1));
+        System.out.println(p.kthSmallest(arr, 3));
+        System.out.println(p.kthLargest(arr, 3));
+    }
 
 }
