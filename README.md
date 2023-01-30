@@ -2,9 +2,9 @@
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
-<img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32' class='avatar circle'/> [vikram-kangotra](https://github.com/vikram-kangotra) (111)
-<img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32' class='avatar circle'/> [Shubh-1-am](https://github.com/Shubh-1-am) (34)
-<img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32' class='avatar circle'/> [Disha-Baghel](https://github.com/Disha-Baghel) (12)
+[<img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/> [vikram-kangotra] (111)](https://github.com/vikram-kangotra)
+[<img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/> [Shubh-1-am] (34)](https://github.com/Shubh-1-am)
+[<img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32'/> [Disha-Baghel] (12)](https://github.com/Disha-Baghel)
 
 ## Algorithms
 - Searching
