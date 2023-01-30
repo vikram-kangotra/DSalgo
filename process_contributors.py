@@ -17,7 +17,7 @@ for i, line in enumerate(readme):
                 [{}] ({})
             </figcaption>
     ]
-</figure>""".format(contributor['avatar_url'], 
+</figure>\n""".format(contributor['avatar_url'], 
                     contributor['login'], 
                     contributor['contributions'], 
                     contributor['html_url'])
