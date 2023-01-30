@@ -2,6 +2,9 @@
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
+- ![alt text](contributor['avatar_url'])[vikram-kangotra](https://github.com/vikram-kangotra) (96)
+- ![alt text](contributor['avatar_url'])[Shubh-1-am](https://github.com/Shubh-1-am) (34)
+- ![alt text](contributor['avatar_url'])[Disha-Baghel](https://github.com/Disha-Baghel) (12)
 - [vikram-kangotra](https://github.com/vikram-kangotra) (85)
 - [Shubh-1-am](https://github.com/Shubh-1-am) (34)
 - [Disha-Baghel](https://github.com/Disha-Baghel) (12)
