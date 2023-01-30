@@ -17,4 +17,5 @@ for line in readme.splitlines():
     else:
         new_readme += line + "\n"
 
-print(new_readme)
+with open("README.md", "w") as f:
+    f.write(new_readme)
