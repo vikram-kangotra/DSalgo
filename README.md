@@ -2,10 +2,7 @@
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
-[<span><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/> [vikram-kangotra] (119)](https://github.com/vikram-kangotra)</span>[<span><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/> [Shubh-1-am] (34)](https://github.com/Shubh-1-am)</span>[<span><img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32'/> [Disha-Baghel] (12)](https://github.com/Disha-Baghel)</span>
-## Algorithms
-- Searching
-    - Binary Search
+<figure>[<img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/> <figcaption>[vikram-kangotra] (107)</figcaption>](https://github.com/vikram-kangotra)</figure><figure>[<img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/> <figcaption>[Shubh-1-am] (34)</figcaption>](https://github.com/Shubh-1-am)</figure><figure>[<img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32'/> <figcaption>[Disha-Baghel] (12)</figcaption>](https://github.com/Disha-Baghel)</figure>    - Binary Search
     - Linear Search
     - Depth First Search
     - Breadth First Search
