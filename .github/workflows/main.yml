@@ -17,6 +17,10 @@ jobs:
     - name: Fetch contributors
       run: |
         curl https://api.github.com/repos/vikram-kangotra/DSalgo/contributors > contributors.json
+        
+    - name: Process contributors
+      run: |
+        python process_contributors.py
     
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
