@@ -2,31 +2,15 @@
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
+<figure>    [        <img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/>            <figcaption>                [vikram-kangotra] (96)            </figcaption>    ](https://github.com/vikram-kangotra)</figure>
+<figure>    [        <img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/>            <figcaption>                [Shubh-1-am] (34)            </figcaption>    ](https://github.com/Shubh-1-am)</figure>
+<figure>    [        <img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32'/>            <figcaption>                [Disha-Baghel] (12)            </figcaption>    ](https://github.com/Disha-Baghel)</figure>
 
-<figure>
-    [
-        <img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/>
-            <figcaption>
-                [vikram-kangotra] (111)
-            </figcaption>
-    ]
-</figure>
-<figure>
-    [
-        <img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/>
-            <figcaption>
-                [Shubh-1-am] (34)
-            </figcaption>
-    ]
-</figure>
-<figure>
-    [
-        <img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32'/>
-            <figcaption>
-                [Disha-Baghel] (12)
-            </figcaption>
-    ]
-</figure>    - Breadth First Search
+## Algorithms
+- Binary Search
+    - Linear Search
+    - Depth First Search
+    - Breadth First Search
     - Rabin-Karp Algorithm
     - Z Algorithm
 - Sorting
