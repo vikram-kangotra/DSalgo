@@ -20,4 +20,4 @@ jobs:
       with:
         commit_message: "Update README with top contributors"
         file_pattern: "README.md"
-        repository: .
+        repository: DSalgo
