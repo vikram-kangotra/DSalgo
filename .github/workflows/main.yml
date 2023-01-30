@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
     - name: Fetch contributors
       run: |
         curl https://api.github.com/repos/vikram-kangotra/DSalgo/contributors > contributors.json
@@ -20,4 +23,3 @@ jobs:
       with:
         commit_message: "Update README with top contributors"
         file_pattern: "README.md"
-        repository: DSalgo
