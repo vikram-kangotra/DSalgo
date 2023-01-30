@@ -1,0 +1,22 @@
+name: Update top 3 contributors
+
+on:
+  push:
+    branches: ["main"]
+    
+  workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Fetch contributors
+      run: |
+        curl https://api.github.com/repos/OWNER/REPO/contributors > contributors.json
+    
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Update README with top contributors"
+        files: "README.md"
