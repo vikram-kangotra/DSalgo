@@ -10,16 +10,17 @@ for i, line in enumerate(readme):
     if line.startswith('## Top 3 Contributors'):
         for j, contributor in enumerate(contributors[:3]):
             readme[i+j+1] = """
-<figure>
-    [<img src='{}' width='32'/>
+<a href='{}'>
+    <figure>
+        <img src='{}' width='32'/>
             <figcaption>
                 [{}] ({})
             </figcaption>
-    ]({})
-</figure>""".replace("\n", "").format(contributor['avatar_url'], 
+    </figure>
+</a>""".replace("\n", "").format(contributor['avatar_url'], 
+                    contributor['html_url'],
                     contributor['login'], 
-                    contributor['contributions'], 
-                    contributor['html_url'])
+                    contributor['contributions'])
             readme[i+j+1] += "\n"
 
 
