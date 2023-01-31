@@ -4,18 +4,25 @@ with open('contributors.json', 'r') as f:
     contributors = json.load(f)
 
 with open("README.md", "r") as f:
-    readme = f.read()
+    readme = f.readlines()
 
-new_readme = ""
-
-for line in readme.splitlines():
+for i, line in enumerate(readme):
     if line.startswith('## Top 3 Contributors'):
-        new_readme += line + "\n"
-        for contributor in contributors[:3]:
-            new_readme += f"- ![alt text](contributor['avatar_url'])[{contributor['login']}]({contributor['html_url']}) ({contributor['contributions']})" + "\n"
+        for j, contributor in enumerate(contributors[:3]):
+            readme[i+j+1] = """
+- <a href='{}'>
+    <figure>
+        <img src='{}' width='32' style='border-radius:50%'/>
+            <figcaption>
+                {} ({})
+            </figcaption>
+    </figure>
+</a>""".replace("\n", "").format(contributor['html_url'], 
+                    contributor['avatar_url'],
+                    contributor['login'], 
+                    contributor['contributions'])
+            readme[i+j+1] += "\n"
 
-    else:
-        new_readme += line + "\n"
 
 with open("README.md", "w") as f:
-    f.write(new_readme)
+    f.writelines(readme)

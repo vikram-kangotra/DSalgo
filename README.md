@@ -2,25 +2,12 @@
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
-- ![alt text](contributor['avatar_url'])[vikram-kangotra](https://github.com/vikram-kangotra) (100)
-- ![alt text](contributor['avatar_url'])[Shubh-1-am](https://github.com/Shubh-1-am) (34)
-- ![alt text](contributor['avatar_url'])[Disha-Baghel](https://github.com/Disha-Baghel) (12)
-- ![alt text](contributor['avatar_url'])[vikram-kangotra](https://github.com/vikram-kangotra) (98)
-- ![alt text](contributor['avatar_url'])[Shubh-1-am](https://github.com/Shubh-1-am) (34)
-- ![alt text](contributor['avatar_url'])[Disha-Baghel](https://github.com/Disha-Baghel) (12)
-- ![alt text](contributor['avatar_url'])[vikram-kangotra](https://github.com/vikram-kangotra) (98)
-- ![alt text](contributor['avatar_url'])[Shubh-1-am](https://github.com/Shubh-1-am) (34)
-- ![alt text](contributor['avatar_url'])[Disha-Baghel](https://github.com/Disha-Baghel) (12)
-- ![alt text](contributor['avatar_url'])[vikram-kangotra](https://github.com/vikram-kangotra) (96)
-- ![alt text](contributor['avatar_url'])[Shubh-1-am](https://github.com/Shubh-1-am) (34)
-- ![alt text](contributor['avatar_url'])[Disha-Baghel](https://github.com/Disha-Baghel) (12)
-- [vikram-kangotra](https://github.com/vikram-kangotra) (85)
-- [Shubh-1-am](https://github.com/Shubh-1-am) (34)
-- [Disha-Baghel](https://github.com/Disha-Baghel) (12)
+- <a href='https://github.com/vikram-kangotra'>    <figure>        <img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32' style='border-radius:50%'/>            <figcaption>                vikram-kangotra (111)            </figcaption>    </figure></a>
+- <a href='https://github.com/Shubh-1-am'>    <figure>        <img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32' style='border-radius:50%'/>            <figcaption>                Shubh-1-am (34)            </figcaption>    </figure></a>
+- <a href='https://github.com/Disha-Baghel'>    <figure>        <img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32' style='border-radius:50%'/>            <figcaption>                Disha-Baghel (12)            </figcaption>    </figure></a>
 
 ## Algorithms
-- Searching
-    - Binary Search
+- Binary Search
     - Linear Search
     - Depth First Search
     - Breadth First Search
