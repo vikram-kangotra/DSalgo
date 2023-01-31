@@ -9,7 +9,7 @@ with open("README.md", "r") as f:
 for i, line in enumerate(readme):
     if line.startswith('## Top 3 Contributors'):
         for j, contributor in enumerate(contributors[:3]):
-            readme[i+j+1] = """
+            readme[i+j+1] = """\n
 <a href='{}'>
     <figure>
         <img src='{}' width='32'/>
