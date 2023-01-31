@@ -16,11 +16,12 @@ for i, line in enumerate(readme):
             <figcaption>
                 [{}] ({})
             </figcaption>
-    ]
-</figure>\n""".format(contributor['avatar_url'], 
+    ]({})
+</figure>""".replace("\n", "").format(contributor['avatar_url'], 
                     contributor['login'], 
                     contributor['contributions'], 
                     contributor['html_url'])
+            readme[i+j+1] += "\n"
 
 
 with open("README.md", "w") as f:
