@@ -17,8 +17,8 @@ for i, line in enumerate(readme):
                 [{}] ({})
             </figcaption>
     </figure>
-</a>""".replace("\n", "").format(contributor['avatar_url'], 
-                    contributor['html_url'],
+</a>""".replace("\n", "").format(contributor['html_url'], 
+                    contributor['avatar_url'],
                     contributor['login'], 
                     contributor['contributions'])
             readme[i+j+1] += "\n"
