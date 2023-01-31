@@ -11,8 +11,7 @@ for i, line in enumerate(readme):
         for j, contributor in enumerate(contributors[:3]):
             readme[i+j+1] = """
 <figure>
-    [
-        <img src='{}' width='32'/>
+    [<img src='{}' width='32'/>
             <figcaption>
                 [{}] ({})
             </figcaption>
