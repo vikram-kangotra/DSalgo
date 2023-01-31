@@ -12,7 +12,7 @@ for i, line in enumerate(readme):
             readme[i+j+1] = """
 - <a href='{}'>
     <figure>
-        <img src='{}' width='32'/>
+        <img src='{}' width='32' style='border-radius:50%'/>
             <figcaption>
                 {} ({})
             </figcaption>
