@@ -14,7 +14,7 @@ for i, line in enumerate(readme):
     <figure>
         <img src='{}' width='32'/>
             <figcaption>
-                [{}] ({})
+                {} ({})
             </figcaption>
     </figure>
 </a>""".replace("\n", "").format(contributor['html_url'], 
