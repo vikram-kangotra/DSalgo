@@ -11,6 +11,7 @@ mod tests {
     use crate::sort::selection::selection_sort;
     use crate::sort::insertion::insertion_sort; 
     use crate::sort::merge::merge_sort;
+    use crate::sort::quick::quick_sort;
 
     #[test]
     fn bubble() {
@@ -45,6 +46,13 @@ mod tests {
     fn merge() {
         let mut arr = [4,6,7,5,8,7,3,2];
         merge_sort(&mut arr);
+        assert_eq!(arr, [2,3,4,5,6,7,7,8]);
+    }
+
+    #[test]
+    fn quick() {
+        let mut arr = [4,6,7,5,8,7,3,2];
+        quick_sort(&mut arr);
         assert_eq!(arr, [2,3,4,5,6,7,7,8]);
     }
 
