@@ -253,6 +253,13 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Propositional directed acyclic graph
     - [] Multigraph
     - [] Hypergraph
+
+- [] STL (Containers)
+    - [] Stack
+    - [] Queue
+    - [] dequeue
+    - [] circular queue
+
 - [] Other
     - [] Lightmap
     - [] Winged edge
