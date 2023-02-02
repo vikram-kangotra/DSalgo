@@ -22,6 +22,9 @@ for res in response:
     contributor = {
         "name": res["author"]["login"],
         "score": a + 2 * d + 2 * c,
+        "additions": a,
+        "deletions": d,
+        "commits": c,
         'html_url': res['author']['html_url'],
         'avatar_url': res['author']['avatar_url']
     }
@@ -35,10 +38,13 @@ with open("README.md", "r") as f:
 for i, line in enumerate(readme):
     if line.startswith('## Top 3 Contributors'):
         for j, contributor in enumerate(contributors[:3]):
-            readme[i+j+3] = "| <a href='{}'><figure><img src='{}' width='32'/><br><figcaption>{}</figcaption></figure></a> | {} |".replace("\n", "").format(
+            readme[i+j+3] = "| <a href='{}'><figure><img src='{}' width='32'/><br><figcaption>{}</figcaption></figure></a> | {} | {} | {} | {} |".replace("\n", "").format(
                     contributor['html_url'], 
                     contributor['avatar_url'],
                     contributor['name'], 
+                    contributor['additions'],
+                    contributor['deletions'],
+                    contributor['commits'],
                     contributor['score'])
             readme[i+j+3] += "\n"
 
