@@ -38,7 +38,7 @@ with open("README.md", "r") as f:
 for i, line in enumerate(readme):
     if line.startswith('## Top 3 Contributors'):
         for j, contributor in enumerate(contributors[:3]):
-            readme[i+j+3] = "| <a href='{}'><figure><img src='{}' width='32'/><br><figcaption>{}</figcaption></figure></a> | {} | {} | {} | {} |".replace("\n", "").format(
+            readme[i+j+3] = "| <a href='{}'><figure><img src='{}' width='64'/><br><figcaption>{}</figcaption></figure></a> | {} | {} | {} | {} |".replace("\n", "").format(
                     contributor['html_url'], 
                     contributor['avatar_url'],
                     contributor['name'], 
