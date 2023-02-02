@@ -254,7 +254,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Multigraph
     - [] Hypergraph
 
-- [] STL (Containers)
+- [] Containers
     - [] Stack
     - [] Queue
     - [] dequeue
