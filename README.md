@@ -2,9 +2,9 @@
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
-- <a href='https://github.com/vikram-kangotra'>    <figure>        <img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32' style='border-radius:50%'/>            <figcaption>                vikram-kangotra (144)            </figcaption>    </figure></a>
-- <a href='https://github.com/Shubh-1-am'>    <figure>        <img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32' style='border-radius:50%'/>            <figcaption>                Shubh-1-am (44)            </figcaption>    </figure></a>
-- <a href='https://github.com/Disha-Baghel'>    <figure>        <img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32' style='border-radius:50%'/>            <figcaption>                Disha-Baghel (12)            </figcaption>    </figure></a>
+- <a href='https://github.com/vikram-kangotra'>    <figure>        <img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/>            <figcaption>                vikram-kangotra (4886)            </figcaption>    </figure></a>
+- <a href='https://github.com/Shubh-1-am'>    <figure>        <img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/>            <figcaption>                Shubh-1-am (4591)            </figcaption>    </figure></a>
+- <a href='https://github.com/aryan-bansal'>    <figure>        <img src='https://avatars.githubusercontent.com/u/59042198?v=4' width='32'/>            <figcaption>                aryan-bansal (470)            </figcaption>    </figure></a>
 
 ## Algorithms
 - Binary Search
