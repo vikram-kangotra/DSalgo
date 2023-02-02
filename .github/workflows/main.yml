@@ -13,10 +13,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      
-    - name: Fetch contributors
-      run: |
-        curl https://api.github.com/repos/vikram-kangotra/DSalgo/contributors > contributors.json
         
     - name: Process contributors
       run: |
