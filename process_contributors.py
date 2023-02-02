@@ -45,8 +45,5 @@ for i, line in enumerate(readme):
                     contributor['score'])
             readme[i+j+1] += "\n"
 
-for line in readme:
-    print(line)
-
 with open("README.md", "w") as f:
    f.writelines(readme)
