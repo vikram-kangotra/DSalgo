@@ -2,16 +2,17 @@
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
-- ![alt text](contributor['avatar_url'])[vikram-kangotra](https://github.com/vikram-kangotra) (96)
-- ![alt text](contributor['avatar_url'])[Shubh-1-am](https://github.com/Shubh-1-am) (34)
-- ![alt text](contributor['avatar_url'])[Disha-Baghel](https://github.com/Disha-Baghel) (12)
-- [vikram-kangotra](https://github.com/vikram-kangotra) (85)
-- [Shubh-1-am](https://github.com/Shubh-1-am) (34)
-- [Disha-Baghel](https://github.com/Disha-Baghel) (12)
+| Contributors | Additions | Deletions | Commits | Score |
+|:-:|:-:|:-:|:-:|:-:|
+| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 2979 | 867 | 134 | 4981 |
+| <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 3895 | 308 | 40 | 4591 |
+| <a href='https://github.com/aryan-bansal'><figure><img src='https://avatars.githubusercontent.com/u/59042198?v=4' width='32'/><br><figcaption>aryan-bansal</figcaption></figure></a> | 196 | 131 | 6 | 470 |
+
+#### Formula Used
+`Score = Additions + 2 * (Deletions + Commits)`
 
 ## Algorithms
-- Searching
-    - Binary Search
+- Binary Search
     - Linear Search
     - Depth First Search
     - Breadth First Search

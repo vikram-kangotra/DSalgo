@@ -248,7 +248,59 @@ public class Sort{
             l = p + 1;
         }
     }
+
+    /*
+     * Cycle Sort
+     * Does minimum memory writes than any other sorting algorithm.
+     * It is not a comparison based sorting algorithm.
+     * It is not stable sorting algorithm.
+     * It is not adaptive sorting algorithm.
+     * Time Complexity: O(n^2)
+     * Space Complexity: O(1)
+     * Useful to solve questions like: find minimum number of swaps to sort an array.
+     */
      
+    public void cycleSort(int[] arr){
+        for(int cycleStart = 0; cycleStart < arr.length - 1; cycleStart++){
+            int item = arr[cycleStart];
+            int pos = cycleStart;
+            // Find position where we put the item.
+            for(int i = cycleStart + 1; i < arr.length; i++){
+                if(arr[i] < item){
+                    pos++;
+                }
+            }
+            // If item is already in correct position
+            if(pos == cycleStart) continue;
+            // Ignore all duplicate elements
+            while(item == arr[pos]){
+                pos++;
+            }
+            // Put the item to it's right position
+            if(pos != cycleStart){
+                int temp = item;
+                item = arr[pos];
+                arr[pos] = temp;
+            }
+            
+            while(pos != cycleStart){
+                pos = cycleStart;
+                for(int i = cycleStart + 1; i < arr.length; i++){
+                    if(arr[i] < item){
+                        pos++;
+                    }
+                }
+                while(item == arr[pos]){
+                    pos++;
+                }
+                if(item != arr[pos]){
+                    int temp = item;
+                    item = arr[pos];
+                    arr[pos] = temp;
+                }
+            }
+        }
+    }
      public static void main(String[] args) {
         
         Sort sort = new Sort();

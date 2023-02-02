@@ -186,6 +186,32 @@ public class Problems {
         return min;
     }
 
+    /*
+     * Minimum differenc in an array
+     * Given an array of integers, the task is to find the minimum difference between any two elements in the array. 
+     */
+
+    public int minDifference(int[] arr){
+        Arrays.sort(arr);
+        int min = Integer.MAX_VALUE;
+        for(int i = 0; i < arr.length - 1; i++){
+            min = Math.min(min, arr[i + 1] - arr[i]);
+        }
+        return min;
+    }
+
+    // /*
+    //  * Minimum no. of swaps required to sort an array
+    //  * using cycle sort
+    //  * Time Complexity: O(n)
+    //  * Space Complexity: O(1)
+    //  */
+
+    // public int minSwaps(int[] arr){
+        
+    // }
+
+
     public static void main(String[] args) {
         
         Problems p = new Problems();
@@ -193,12 +219,22 @@ public class Problems {
         int[] arr2 = {2, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10};
         p.intersectionOfTwoSortedArrays(arr1, arr2);
         System.out.println();
+
         p.unionOfTwoSortedArrays(arr1, arr2);
         System.out.println();
+
         int[] arr = {2, 4, 1, 3, 5};
         System.out.println(p.countInversion(arr, 0, arr.length - 1));
+
         System.out.println(p.kthSmallest(arr, 3));
+
         System.out.println(p.kthLargest(arr, 3));
+
+        int[] arr3 = {7, 3, 2, 4, 9, 12, 56};
+        System.out.println(p.chocolateDistribution(arr3, 3));
+
+        int[] arr4 = {1, 19, -4, 31, 38, 25, 100};
+        System.out.println(p.minDifference(arr4));
     }
 
 }
