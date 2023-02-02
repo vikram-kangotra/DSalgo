@@ -4,9 +4,9 @@ A repository of almost all Data Structures and Algorithm in different programmin
 ## Top 3 Contributors
 | Contributors | Score |
 |---|---|
-| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/><figcaption>vikram-kangotra</figcaption></figure></a> | 4897 |
-| <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/><figcaption>Shubh-1-am</figcaption></figure></a> | 4591 |
-| <a href='https://github.com/aryan-bansal'><figure><img src='https://avatars.githubusercontent.com/u/59042198?v=4' width='32'/><figcaption>aryan-bansal</figcaption></figure></a> | 470 |
+| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 4948 |
+| <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 4591 |
+| <a href='https://github.com/aryan-bansal'><figure><img src='https://avatars.githubusercontent.com/u/59042198?v=4' width='32'/><br><figcaption>aryan-bansal</figcaption></figure></a> | 470 |
 
 ## Algorithms
 - Binary Search
