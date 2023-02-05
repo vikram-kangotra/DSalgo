@@ -3,6 +3,8 @@ name: Rust Test
 on:
   push:
     branches: [ "main" ]
+    paths: Rust/**
+    
 
 env:
   CARGO_TERM_COLOR: always
