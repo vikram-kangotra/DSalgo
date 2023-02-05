@@ -1,12 +1,13 @@
 import requests
 import json
+import sys
 
 url = "https://api.github.com/repos/vikram-kangotra/DSalgo/stats/contributors"
 
 response = requests.get(url)
 
 if response.status_code != 200:
-    quit()
+    sys.exit(1)
 
 response = response.json()
 
