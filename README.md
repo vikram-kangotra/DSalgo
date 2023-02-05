@@ -1,3 +1,4 @@
+[![Rust Test](https://github.com/vikram-kangotra/DSalgo/actions/workflows/rust.yml/badge.svg)](https://github.com/vikram-kangotra/DSalgo/actions/workflows/rust.yml)
 # DSalgo
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
