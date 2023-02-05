@@ -7,6 +7,7 @@ url = "https://api.github.com/repos/vikram-kangotra/DSalgo/stats/contributors"
 response = requests.get(url)
 
 if response.status_code != 200:
+    print("Error: ", response.status_code)
     sys.exit(1)
 
 response = response.json()
