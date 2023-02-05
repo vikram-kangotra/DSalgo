@@ -28,7 +28,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Kruskal's Algo
     - [] Dijkstra's Algo
     - [] Bellman Ford Algo
-    - [] Floyd Warshall Algo
+    - [x] Floyd Warshall Algo
     - [] Topological Sort Algo
     - [] Flood Fill Algo
     - [] Lee Algo
