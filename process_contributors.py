@@ -1,10 +1,22 @@
 import requests
 import json
 import sys
+import time
 
 url = "https://api.github.com/repos/vikram-kangotra/DSalgo/stats/contributors"
 
 response = requests.get(url)
+
+# The API sometimes returns a 202 status code, which means that the
+# request was accepted but not yet processed. In this case, we wait
+# for 5 seconds and try again 10 times.
+for i in range(10):
+    if response.status_code == 202:
+        print("Waiting for GitHub to process the request...")
+        time.sleep(5)
+        response = requests.get(url)
+    else:
+        break
 
 if response.status_code != 200:
     print("Error: ", response.status_code)
