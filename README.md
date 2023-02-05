@@ -1,4 +1,4 @@
-[![Update top 3 contributors](https://github.com/vikram-kangotra/DSalgo/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/vikram-kangotra/DSalgo/actions/workflows/main.yml)
+[![Update top 3 contributors](https://github.com/vikram-kangotra/DSalgo/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/vikram-kangotra/DSalgo/actions/workflows/main.yml)
 # DSalgo
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
