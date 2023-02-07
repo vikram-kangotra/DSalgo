@@ -1,10 +1,17 @@
+[![Rust Test](https://github.com/vikram-kangotra/DSalgo/actions/workflows/rust.yml/badge.svg)](https://github.com/vikram-kangotra/DSalgo/actions/workflows/rust.yml)
+[![Update top 3 contributors](https://github.com/vikram-kangotra/DSalgo/actions/workflows/main.yml/badge.svg)](https://github.com/vikram-kangotra/DSalgo/actions/workflows/main.yml)
 # DSalgo
 A repository of almost all Data Structures and Algorithm in different programming languages.
 
 ## Top 3 Contributors
-- <a href='https://github.com/vikram-kangotra'>    <figure>        <img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='32' style='border-radius:50%'/>            <figcaption>                vikram-kangotra (184)            </figcaption>    </figure></a>
-- <a href='https://github.com/Shubh-1-am'>    <figure>        <img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='32' style='border-radius:50%'/>            <figcaption>                Shubh-1-am (44)            </figcaption>    </figure></a>
-- <a href='https://github.com/Disha-Baghel'>    <figure>        <img src='https://avatars.githubusercontent.com/u/107053261?v=4' width='32' style='border-radius:50%'/>            <figcaption>                Disha-Baghel (12)            </figcaption>    </figure></a>
+| Contributors | Additions | Deletions | Commits | Score |
+|:-:|:-:|:-:|:-:|:-:|
+| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3212 | 961 | 158 | 5450 |
+| <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 3895 | 308 | 40 | 4591 |
+| <a href='https://github.com/aryan-bansal'><figure><img src='https://avatars.githubusercontent.com/u/59042198?v=4' width='64'/><br><figcaption>aryan-bansal</figcaption></figure></a> | 196 | 131 | 6 | 470 |
+
+#### Formula Used
+`Score = Additions + 2 * (Deletions + Commits)`
 
 ## Algorithms
 - Binary Search

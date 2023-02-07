@@ -15,7 +15,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Heap Sort
     - [X] Selection Sort
     - [x] Merge Sort
-    - [] Quick Sort
+    - [x] Quick Sort
     - [X] Counting Sort
     - [] Bucket Sort
     - [X] Bubble Sort
@@ -28,7 +28,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Kruskal's Algo
     - [] Dijkstra's Algo
     - [] Bellman Ford Algo
-    - [] Floyd Warshall Algo
+    - [x] Floyd Warshall Algo
     - [] Topological Sort Algo
     - [] Flood Fill Algo
     - [] Lee Algo
