@@ -287,5 +287,24 @@ public class Hashing {
           }
           return max_length;
         }
+
+        public List<Integer> findDistictElementsInEveryWindow(int[] arr, int window_size){
+          List<Integer> list = new ArrayList<>();
+          HashMap<Integer, Integer> map = new HashMap<>();
+          for(int i = 0; i < window_size; i++){
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+          }
+          list.add(map.size());
+          for(int i = window_size; i < arr.length; i++){
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+            map.put(arr[i - window_size], map.get(arr[i - window_size]) - 1);
+            if(map.get(arr[i - window_size]) == 0){
+              map.remove(arr[i - window_size]);
+            }
+            list.add(map.size());
+          }
+          return list;
+
+        }
     public static void main(String[] args) {}
 }
