@@ -249,7 +249,7 @@ public class Hashing {
 
         // Find longest subarray with equal number of 0s and 1s
         // Hint : Use prefix sum technique.
-        //        This proble is going to get reduced into the problem of finding length of longest subarray with 0 sum o replacing 0 in the array with -1.
+        //        This problem is going to get reduced into the problem of finding length of longest subarray with 0 sum on replacing 0 in the array with -1.
 
         public int longestSubarrayWithEqualNumberOf0sAnd1s(int[] arr){
           for(int i = 0; i < arr.length; i++){
@@ -258,6 +258,17 @@ public class Hashing {
             }
           }
           return longestSubarrayWithGivenSum(arr, 0);
+        }
+
+        // Find longest common span with same sum in two binary arrays
+        // Hint : Use prefix sum technique.
+        //        This problem is going to get reduced into the problem of finding length of longest subarray with 0 sum.
+
+        public int longestCommonSpanWithSameSumInTwoBinaryArrays(int[] arr1, int[] arr2){
+          for(int i = 0; i < arr1.length; i++){
+            arr1[i] -= arr2[i];
+          }
+          return longestSubarrayWithGivenSum(arr1, 0);
         }
     public static void main(String[] args) {}
 }
