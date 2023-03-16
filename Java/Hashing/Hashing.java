@@ -270,5 +270,22 @@ public class Hashing {
           }
           return longestSubarrayWithGivenSum(arr1, 0);
         }
+
+        public int longestConsecutiveSubsequence(int[] arr){
+          HashSet<Integer> set = new HashSet<>();
+          for (int x : arr)
+              set.add(x);
+          int max_length = 0;
+          for (int x : arr){
+            if(!set.contains(x - 1)){
+              int curr_length = 1;
+              while(set.contains(x + curr_length)){
+                curr_length++;
+              }
+              max_length = Math.max(max_length, curr_length);
+            }
+          }
+          return max_length;
+        }
     public static void main(String[] args) {}
 }
