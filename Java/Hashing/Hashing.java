@@ -228,7 +228,24 @@ public class Hashing {
           return false;
         }
 
-    
+        public int longestSubarrayWithGivenSum(int[] arr, int sum){
+          int prefix_sum = 0;
+          int max_length = 0;
+          HashMap<Integer, Integer> map = new HashMap<>();
+          for(int i = 0; i < arr.length; i++){
+            prefix_sum += arr[i];
+            if(prefix_sum == sum){
+              max_length = i + 1;
+            }
+            if(!map.containsKey(prefix_sum)){
+              map.put(prefix_sum, i);
+            }
+            if(map.containsKey(prefix_sum - sum)){
+              max_length = Math.max(max_length, i - map.get(prefix_sum - sum));
+            }
+          }
+          return max_length;
+        }
 
     public static void main(String[] args) {}
 }
