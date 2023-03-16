@@ -247,5 +247,17 @@ public class Hashing {
           return max_length;
         }
 
+        // Find longest subarray with equal number of 0s and 1s
+        // Hint : Use prefix sum technique.
+        //        This proble is going to get reduced into the problem of finding length of longest subarray with 0 sum o replacing 0 in the array with -1.
+
+        public int longestSubarrayWithEqualNumberOf0sAnd1s(int[] arr){
+          for(int i = 0; i < arr.length; i++){
+            if(arr[i] == 0){
+              arr[i] = -1;
+            }
+          }
+          return longestSubarrayWithGivenSum(arr, 0);
+        }
     public static void main(String[] args) {}
 }
