@@ -228,7 +228,100 @@ public class Hashing {
           return false;
         }
 
-    
+        public int longestSubarrayWithGivenSum(int[] arr, int sum){
+          int prefix_sum = 0;
+          int max_length = 0;
+          HashMap<Integer, Integer> map = new HashMap<>();
+          for(int i = 0; i < arr.length; i++){
+            prefix_sum += arr[i];
+            if(prefix_sum == sum){
+              max_length = i + 1;
+            }
+            if(!map.containsKey(prefix_sum)){
+              map.put(prefix_sum, i);
+            }
+            if(map.containsKey(prefix_sum - sum)){
+              max_length = Math.max(max_length, i - map.get(prefix_sum - sum));
+            }
+          }
+          return max_length;
+        }
+
+        // Find longest subarray with equal number of 0s and 1s
+        // Hint : Use prefix sum technique.
+        //        This problem is going to get reduced into the problem of finding length of longest subarray with 0 sum on replacing 0 in the array with -1.
+
+        public int longestSubarrayWithEqualNumberOf0sAnd1s(int[] arr){
+          for(int i = 0; i < arr.length; i++){
+            if(arr[i] == 0){
+              arr[i] = -1;
+            }
+          }
+          return longestSubarrayWithGivenSum(arr, 0);
+        }
+
+        // Find longest common span with same sum in two binary arrays
+        // Hint : Use prefix sum technique.
+        //        This problem is going to get reduced into the problem of finding length of longest subarray with 0 sum.
+
+        public int longestCommonSpanWithSameSumInTwoBinaryArrays(int[] arr1, int[] arr2){
+          for(int i = 0; i < arr1.length; i++){
+            arr1[i] -= arr2[i];
+          }
+          return longestSubarrayWithGivenSum(arr1, 0);
+        }
+
+        public int longestConsecutiveSubsequence(int[] arr){
+          HashSet<Integer> set = new HashSet<>();
+          for (int x : arr)
+              set.add(x);
+          int max_length = 0;
+          for (int x : arr){
+            if(!set.contains(x - 1)){
+              int curr_length = 1;
+              while(set.contains(x + curr_length)){
+                curr_length++;
+              }
+              max_length = Math.max(max_length, curr_length);
+            }
+          }
+          return max_length;
+        }
+
+        public List<Integer> findDistictElementsInEveryWindow(int[] arr, int window_size){
+          List<Integer> list = new ArrayList<>();
+          HashMap<Integer, Integer> map = new HashMap<>();
+          for(int i = 0; i < window_size; i++){
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+          }
+          list.add(map.size());
+          for(int i = window_size; i < arr.length; i++){
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+            map.put(arr[i - window_size], map.get(arr[i - window_size]) - 1);
+            if(map.get(arr[i - window_size]) == 0){
+              map.remove(arr[i - window_size]);
+            }
+            list.add(map.size());
+          }
+          return list;
+
+        }
+
+        // Find no of lements in array having occurances more than n/k times
+
+        public int findNoOfElementsOccuringMoreThanNKTimes(int[] arr, int k){
+          HashMap<Integer, Integer> map = new HashMap<>();
+          for(int i = 0; i < arr.length; i++){
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+          }
+          int count = 0;
+          for(Map.Entry<Integer, Integer> e : map.entrySet()){
+            if(e.getValue() > arr.length / k){
+              count++;
+            }
+          }
+          return count;
+        }
 
     public static void main(String[] args) {}
 }
