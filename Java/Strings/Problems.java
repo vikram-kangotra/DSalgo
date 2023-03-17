@@ -47,6 +47,20 @@ public class Problems{
         return true;
     }
 
+    public int indexOfLeftmostRepeatingCharacter(String s){
+        boolean[] visited = new boolean[256];
+        int res = -1;
+        for(int i = s.length() - 1; i >= 0; i--){
+            if(visited[s.charAt(i)]){
+                res = i;
+            }else{
+                visited[s.charAt(i)] = true;
+            }
+        }
+        return res;
+    }
+    
+
     public static void main(String[] args){
         
     }
