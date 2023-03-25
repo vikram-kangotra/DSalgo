@@ -1,0 +1,25 @@
+name: Update top 3 contributors
+
+on:
+  push:
+    branches: ["main"]
+    
+  workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+        
+    - name: Process contributors
+      run: |
+        python process_contributors.py
+    
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Update README with top contributors"
+        file_pattern: "README.md"
