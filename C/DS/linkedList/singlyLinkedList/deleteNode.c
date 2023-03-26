@@ -1,4 +1,3 @@
-
 #include "linkedList.h"
 #include <sys/types.h>
 
