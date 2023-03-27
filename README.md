@@ -10,8 +10,6 @@ A repository of almost all Data Structures and Algorithm in different programmin
 | <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3229 | 977 | 170 | 5523 |
 | <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 4559 | 327 | 69 | 5351 |
 | <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 349 | 53 | 17 | 489 |
-| <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 4559 | 327 | 69 | 5351 |
-| <a href='https://github.com/aryan-bansal'><figure><img src='https://avatars.githubusercontent.com/u/59042198?v=4' width='64'/><br><figcaption>aryan-bansal</figcaption></figure></a> | 196 | 131 | 6 | 470 |
 
 #### Formula Used
 `Score = Additions + 2 * (Deletions + Commits)`
