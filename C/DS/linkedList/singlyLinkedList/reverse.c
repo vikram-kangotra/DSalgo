@@ -1,7 +1,6 @@
 #include "linkedList.h"
-#include "node.h"
 
-struct Node* reverse(struct Node* head){
+struct Node* reverse(struct Node* head) {
 
     if (head == NULL || head->next == NULL) 
         return head;
