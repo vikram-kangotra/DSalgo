@@ -1,45 +1,46 @@
 
 import java.util.*;
-public class SinglyLinkedList {
-    private Node head;
-    private int size;
+public class SinglyLinkedList<T> {
 
-    private class Node {
-        private int data;
-        private Node next;
+    private static class Node<T> {
+        private T data;
+        private Node<T> next;
 
-        public Node(int data) {
+        public Node(T data) {
             this.data = data;
             this.next = null;
         }
     }
 
-    public SinglyLinkedList() {
-        this.head = null;
-        this.size = 0;
-    }
+    private Node<T> head;
+    private int size;
 
-    public int getSize() {
-        return size;
+    public SinglyLinkedList() {
+        head = null;
+        size = 0;
     }
 
     public boolean isEmpty() {
-        return head == null;
+        return size == 0;
     }
 
-    public void addFirst(int data) {
-        Node newNode = new Node(data);
+    public int size() {
+        return size;
+    }
+
+    public void addFirst(T data) {
+        Node<T> newNode = new Node<>(data);
         newNode.next = head;
         head = newNode;
         size++;
     }
 
-    public void addLast(int data) {
-        Node newNode = new Node(data);
+    public void addLast(T data) {
+        Node<T> newNode = new Node<>(data);
         if (isEmpty()) {
             head = newNode;
         } else {
-            Node current = head;
+            Node<T> current = head;
             while (current.next != null) {
                 current = current.next;
             }
@@ -48,49 +49,47 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public void addAtIndex(int index, int data) {
+    public void addAtIndex(int index, T data) {
         if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index out of range: " + index);
         }
         if (index == 0) {
             addFirst(data);
-        } else if (index == size) {
-            addLast(data);
-        } else {
-            Node newNode = new Node(data);
-            Node current = head;
-            for (int i = 0; i < index - 1; i++) {
-                current = current.next;
-            }
-            newNode.next = current.next;
-            current.next = newNode;
-            size++;
+            return;
         }
+        Node<T> newNode = new Node<>(data);
+        Node<T> current = head;
+        for (int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+        size++;
     }
 
-    public int getFirst() {
+    public T getFirst() {
         if (isEmpty()) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("List is empty");
         }
         return head.data;
     }
 
-    public int getLast() {
+    public T getLast() {
         if (isEmpty()) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("List is empty");
         }
-        Node current = head;
+        Node<T> current = head;
         while (current.next != null) {
             current = current.next;
         }
         return current.data;
     }
 
-    public int getAtIndex(int index) {
+    public T getAtIndex(int index) {
         if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index out of range: " + index);
         }
-        Node current = head;
+        Node<T> current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
         }
@@ -99,7 +98,7 @@ public class SinglyLinkedList {
 
     public void removeFirst() {
         if (isEmpty()) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("List is empty");
         }
         head = head.next;
         size--;
@@ -107,12 +106,12 @@ public class SinglyLinkedList {
 
     public void removeLast() {
         if (isEmpty()) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("List is empty");
         }
         if (size == 1) {
             head = null;
         } else {
-            Node current = head;
+            Node<T> current = head;
             while (current.next.next != null) {
                 current = current.next;
             }
@@ -123,24 +122,22 @@ public class SinglyLinkedList {
 
     public void removeAtIndex(int index) {
         if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index out of range: " + index);
         }
         if (index == 0) {
             removeFirst();
-        } else if (index == size - 1) {
-            removeLast();
-        } else {
-            Node current = head;
-            for (int i = 0; i < index - 1; i++) {
-                current = current.next;
-            }
-            current.next = current.next.next;
-            size--;
+            return;
         }
+        Node<T> current = head;
+        for (int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+        current.next = current.next.next;
+        size--;
     }
 
     public void printList() {
-        Node current = head;
+        Node<T> current = head;
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.next;
@@ -149,29 +146,25 @@ public class SinglyLinkedList {
     }
 
     public static void main(String[] args) {
-        SinglyLinkedList myList = new SinglyLinkedList();
-        
-        System.out.println("Is the list empty? " + myList.isEmpty());
-        System.out.println("List size: " + myList.getSize());
-        
-        myList.addFirst(1);
-        myList.addLast(2);
-        myList.addAtIndex(1, 3);
-        
-        System.out.println("List elements:");
-        myList.printList();
-        System.out.println("List size: " + myList.getSize());
-        
-        System.out.println("First element: " + myList.getFirst());
-        System.out.println("Last element: " + myList.getLast());
-        System.out.println("Element at index 1: " + myList.getAtIndex(1));
-        
-        myList.removeFirst();
-        myList.removeLast();
-        myList.removeAtIndex(0);
-        
-        System.out.println("List elements:");
-        myList.printList();
-        System.out.println("List size: " + myList.getSize());
+        SinglyLinkedList<String> list = new SinglyLinkedList<>();
+    
+        // add elements to the list
+        list.addFirst("Alice");
+        list.addLast("Bob");
+        list.addAtIndex(1, "Charlie");
+    
+        // print the list
+        System.out.println("List contents:");
+        list.printList();
+    
+        // remove elements from the list
+        list.removeFirst();
+        list.removeLast();
+        list.removeAtIndex(0);
+    
+        // print the list again
+        System.out.println("List contents after removals:");
+        list.printList();
     }
+    
 }
