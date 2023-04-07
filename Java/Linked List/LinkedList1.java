@@ -308,4 +308,68 @@ public class LinkedList1 {
         kthNode.next = null;
         return head;
     }
+
+    // Write a function to get the intersection point of two Linked Lists.
+
+    /*
+     * There are two singly linked lists in a system. By some programming error, the end node of one of the linked lists got linked to the second list, forming an inverted Y-shaped list. Write a program to get the point where two linked lists merge. 
+     */
+
+    // By using the difference of length of two linked lists
+    /*
+     * 1. Calculate the lengths of both the linked lists.
+     * 2. Calculate the difference in lengths of both the linked lists.
+     * 3. Move the pointer of the longer linked list by the difference in lengths.
+     * 4. Now move both the pointers of both the linked lists until they point to the same node.
+     * 5. Return the node.
+     */
+    public Node getIntersectionNode1(Node headA, Node headB) {
+        int lenA = 0;
+        int lenB = 0;
+        Node currentA = headA;
+        Node currentB = headB;
+        while(currentA != null){
+            lenA++;
+            currentA = currentA.next;
+        }
+        while(currentB != null){
+            lenB++;
+            currentB = currentB.next;
+        }
+        currentA = headA;
+        currentB = headB;
+        if(lenA > lenB){
+            int diff = lenA - lenB;
+            while(diff > 0){
+                currentA = currentA.next;
+                diff--;
+            }
+        }
+        else{
+            int diff = lenB - lenA;
+            while(diff > 0){
+                currentB = currentB.next;
+                diff--;
+            }
+        }
+        while(currentA != null && currentB != null){
+            if(currentA == currentB){
+                return currentA;
+            }
+            currentA = currentA.next;
+            currentB = currentB.next;
+        }
+        return null;
+    }
+
+    // Using two pointers approach
+    public Node getIntersectionNode2(Node headA, Node headB) {
+        Node currentA = headA;
+        Node currentB = headB;
+        while(currentA != currentB){
+            currentA = currentA == null ? headB : currentA.next;
+            currentB = currentB == null ? headA : currentB.next;
+        }
+        return currentA;
+    }
 }
