@@ -6,7 +6,7 @@ class Mathematics {
     
     public int no_of_digits(long n){
         if (n == 0) return 0;
-        return 1 + no_of_digits(n/10);
+        return 1 + no_of_digits(n/10); // or calculate log10(n) + 1;
     }
 
     public int factorial(int n){
