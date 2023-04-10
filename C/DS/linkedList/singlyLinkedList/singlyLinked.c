@@ -24,6 +24,9 @@ int main() {
 
     displayReversedList(head);
     printf("\n");//it is required to break the line, it cann't be included in recursive-fuction.
+
+    head = reverse(head);
+    displayList(head);
     
     return 0;
 }

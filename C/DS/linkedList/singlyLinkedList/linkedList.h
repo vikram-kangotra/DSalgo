@@ -8,3 +8,5 @@ struct Node* deleteNode (struct Node* head, size_t index);
 void displayList (struct Node*);
 
 void displayReversedList (struct Node*);
+
+struct Node* reverse(struct Node*);
