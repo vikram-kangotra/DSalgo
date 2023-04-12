@@ -52,6 +52,11 @@ int main() {
 
             case 5:
                 flag = 0;
+                break;
+
+            default:
+                printf("Invalid Input!\nTry again.\n");
+                getchar();
                 
         }
     }
@@ -65,7 +70,7 @@ int isEmpty() {
 
 void push(int data) {
     if(first_element == MAXSIZE - 1)
-        printf("Stack OverFlow\n");
+        printf("Stack OverFlow!\n");
     else {
         ++first_element;
         for(int i=first_element; i>=0; i--)
@@ -77,7 +82,7 @@ void push(int data) {
 
 int pop() {
     if(isEmpty()){
-        printf("Stack UnderFlow\n");
+        printf("Stack UnderFlow!\n");
         return -1 ;
     }
     
@@ -93,13 +98,13 @@ int peek() {
     if(first_element != -1)
         return stack_arr[0];
 
-    printf("Stack is Empty.\n");
+    printf("Stack is Empty!\n");
     return -1;
 }
 
 void print() {
     if(first_element < 0)
-        printf("empty stack\n");
+        printf("Stack is Empty!\n");
 
     for(int i=0; i<=first_element; i++)
         printf("%d ", stack_arr[i]);
