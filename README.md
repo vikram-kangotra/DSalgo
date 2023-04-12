@@ -8,7 +8,7 @@ A repository of almost all Data Structures and Algorithm in different programmin
 | Contributors | Additions | Deletions | Commits | Score |
 |:-:|:-:|:-:|:-:|:-:|
 | <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 6278 | 737 | 85 | 7922 |
-| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3242 | 992 | 178 | 5582 |
+| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3243 | 993 | 179 | 5587 |
 | <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 668 | 73 | 29 | 872 |
 
 #### Formula Used
