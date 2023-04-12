@@ -167,6 +167,89 @@ public class StackProblems {
         return res;
     }
 
+    // Reverse individual words in a string
+
+    public String reverseIndividualWords(String str) {
+        Stack<Character> stack = new Stack<>();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == ' ') {
+                while (!stack.isEmpty()) {
+                    sb.append(stack.pop());
+                }
+                sb.append(ch);
+            } else {
+                stack.push(ch);
+            }
+        }
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
+        return sb.toString();
+    }
+
+    // Reverse a stack using recursion
+
+    public void reverseStack(Stack<Integer> stack) {
+        if (stack.isEmpty()) {
+            return;
+        }
+        int temp = stack.pop();
+        reverseStack(stack);
+        insertAtBottom(stack, temp);
+    }
+
+    public void insertAtBottom(Stack<Integer> stack, int temp) {
+        if (stack.isEmpty()) {
+            stack.push(temp);
+            return;
+        }
+        int val = stack.pop();
+        insertAtBottom(stack, temp);
+        stack.push(val);
+    }
+
+    // Delete middle element of a stack
+    public void deleteMiddleElement(Stack<Integer> stack, int size) {
+        if (stack.isEmpty()) {
+            return;
+        }
+        int mid = (size / 2) + 1;
+        deleteMiddleElementUtil(stack, mid);
+    }
+
+    public void deleteMiddleElementUtil(Stack<Integer> stack, int mid) {
+        if (mid == 1) {
+            stack.pop();
+            return;
+        }
+        int temp = stack.pop();
+        deleteMiddleElementUtil(stack, mid - 1);
+        stack.push(temp);
+    }
+
+    // Sort a stack using recursion
+
+    public void sortStack(Stack<Integer> stack) {
+        if (stack.isEmpty()) {
+            return;
+        }
+        int temp = stack.pop();
+        sortStack(stack);
+        insertInSortedOrder(stack, temp);
+    }
+
+    public void insertInSortedOrder(Stack<Integer> stack, int temp) {
+        if (stack.isEmpty() || stack.peek() < temp) {
+            stack.push(temp);
+            return;
+        }
+        int val = stack.pop();
+        insertInSortedOrder(stack, temp);
+        stack.push(val);
+    }
+
     public static void main(String[] args) {
         StackProblems sp = new StackProblems();
         
