@@ -9,7 +9,7 @@ A repository of almost all Data Structures and Algorithm in different programmin
 |:-:|:-:|:-:|:-:|:-:|
 | <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 6606 | 738 | 90 | 8262 |
 | <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3246 | 996 | 182 | 5602 |
-| <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 1308 | 89 | 38 | 1562 |
+| <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 1319 | 104 | 40 | 1607 |
 
 #### Formula Used
 `Score = Additions + 2 * (Deletions + Commits)`
