@@ -4,24 +4,20 @@
 
 Node* reverseList(Node* head)
 {
-    if(head == NULL ) {
-        printf("List is empty\n");
-    } else if(head->next != NULL) {
+    if (head != NULL && head->next != NULL) {
+        Node* temp = NULL;
         Node* currNode = head;
-        Node* nextNode = head->next;
 
-        currNode->next = NULL;
-        currNode->prev = nextNode;
-
-        while(nextNode != NULL)
-        {
-            nextNode->prev = nextNode->next;
-            nextNode->next = currNode;
-            currNode = nextNode;
-            nextNode = nextNode->prev;
+        while (currNode != NULL) {
+            temp = currNode->prev;
+            currNode->prev = currNode->next;
+            currNode->next = temp;
+            currNode = currNode->prev; //because the address of next node to currNode is stored in currNode->prev.
         }
-        head = currNode;
+
+        head = temp->prev; //because temp points to second last node and this node have address of last node in prev part.
     }
+
 
     return head;
 
