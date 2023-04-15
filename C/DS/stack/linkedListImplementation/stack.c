@@ -21,6 +21,7 @@ void stack() {
             case 1:
                 printf("Enter the element to be pushed: ");
                 scanf("%d", &data);
+                getchar();
                 push(&top, data);
                 break;
 
@@ -49,6 +50,7 @@ void stack() {
 
             case 7:
                 flag = 0;
+                deleteStack(&top);
                 break;
 
             default:
