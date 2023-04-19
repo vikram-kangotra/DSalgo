@@ -6,6 +6,8 @@
 // majority element is the element that appears more than n/2 times
 // Time Complexity: O(n)
 // Space Complexity: O(1)
+
+#[allow(dead_code)]
 pub fn majority_element(nums: &[i32]) -> i32 {
     let mut count = 0;
     let mut candidate = 0;

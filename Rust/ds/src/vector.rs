@@ -7,6 +7,7 @@ pub struct Vector<T> {
 }
 
 impl<T> Vector<T> {
+    #[allow(dead_code)]
     pub fn new() -> Self {
         Self {
             data: ptr::null_mut(),
@@ -15,6 +16,7 @@ impl<T> Vector<T> {
         }
     }
     
+    #[allow(dead_code)]
     pub fn with_capacity(cap: usize) -> Self {
         let data = unsafe {
             let layout = Layout::from_size_align_unchecked(cap, std::mem::size_of::<T>());
@@ -27,6 +29,7 @@ impl<T> Vector<T> {
         }
     }
 
+    #[allow(dead_code)]
     pub fn push_back(&mut self, value: T) {
         if self.len == self.cap {
             self.grow();
@@ -37,6 +40,7 @@ impl<T> Vector<T> {
         self.len += 1;
     }
 
+    #[allow(dead_code)]
     pub fn pop_back(&mut self) -> Option<T> {
         if self.len == 0 {
             return None;
@@ -47,14 +51,17 @@ impl<T> Vector<T> {
         }
     }
 
+    #[allow(dead_code)]
     pub fn len(&self) -> usize {
         self.len
     }
 
+    #[allow(dead_code)]
     pub fn capacity(&self) -> usize {
         self.cap
     }
 
+    #[allow(dead_code)]
     fn grow(&mut self) {
         self.cap = if self.cap == 0 {
             1
