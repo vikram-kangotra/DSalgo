@@ -11,6 +11,8 @@ int pop(Node** top);
 
 int peek(Node* top);
 
+void reverseStack(Node** top);
+
 void print(Node* top);
 
 void deleteStack(Node** top);

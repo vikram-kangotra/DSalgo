@@ -9,9 +9,10 @@ void stack() {
         printf("\n1. Push\n");
         printf("2. Pop\n");
         printf("3. Print Top element of the stack\n");
-        printf("4. Print all Element on stack.\n");
-        printf("5. Delete stack.\n");
-        printf("6. Quit.\n");
+        printf("4. Reverse the stack.\n");
+        printf("5. Print all Element on stack.\n");
+        printf("6. Delete stack.\n");
+        printf("7. Quit.\n");
         printf("Please enter your choice: ");
         scanf("%d", &choice);
 
@@ -20,6 +21,7 @@ void stack() {
             case 1:
                 printf("Enter the element to be pushed: ");
                 scanf("%d", &data);
+                getchar();
                 push(&top, data);
                 break;
 
@@ -35,15 +37,20 @@ void stack() {
                 break;
 
             case 4:
+                reverseStack(&top);
+                break;
+                
+            case 5:
                 print(top);
                 break;
 
-            case 5:
+            case 6:
                 deleteStack(&top);
                 break;
 
-            case 6:
+            case 7:
                 flag = 0;
+                deleteStack(&top);
                 break;
 
             default:
