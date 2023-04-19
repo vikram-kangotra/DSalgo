@@ -32,6 +32,12 @@ public class Recursion {
         generateSubsets(str, index+1, curr);
     }
 
+    /*
+     *  Shift ‘N-1’ disks from ‘A’ to ‘B’, using C.
+     *  Shift last disk from ‘A’ to ‘C’.
+     *  Shift ‘N-1’ disks from ‘B’ to ‘C’, using A.
+     */
+
     public void tower_of_hanoi(int topN, char from, char inter, char to){
         if (topN == 1) {
             System.out.println("Disk 1 from " + from + " to " + to);
