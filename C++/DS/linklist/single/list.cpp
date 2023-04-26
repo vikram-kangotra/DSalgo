@@ -1,5 +1,5 @@
 /*
- * This program is implementation of generic link list with help of templeates.
+ * This program is implementation of generic link list with help of templates.
  *
  * */
 
