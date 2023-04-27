@@ -114,58 +114,84 @@ class LinkList {
 
     }
 
-    void displayList() {
-        if( head != nullptr) {
-            Node<T>* temp = head;
-            while (temp != nullptr) {
-                cout<<temp->data<<" ";
-                temp = temp->next;
+    Node<T>*  sort() {
+        if(head != nullptr && head->next != nullptr) {
+            //using insertion  sort.
+            Node<T>* insert_at = head;
+            while(insert_at->next != nullptr) {
+                Node<T>* ptr_curr_min = insert_at;
+                Node<T>* temp = insert_at->next;
+                while (temp != nullptr) {
+                    if(ptr_curr_min->data > temp->data)
+                        ptr_curr_min = temp;
+                    temp = temp->next;
+                }
+
+                if(insert_at->data != ptr_curr_min->data) {
+                    T tp = insert_at->data;
+                    insert_at->data = ptr_curr_min->data;
+                    ptr_curr_min->data = tp;
+                }
+                insert_at = insert_at->next;
             }
-            cout<<endl;
-        } else {
-            cout<<"List is empty!"<<endl;
         }
+        return head;
     }
-};
+        void displayList() {
+            if( head != nullptr) {
+                Node<T>* temp = head;
+                while (temp != nullptr) {
+                    cout<<temp->data<<" ";
+                    temp = temp->next;
+                }
+                cout<<endl;
+            } else {
+                cout<<"List is empty!"<<endl;
+            }
+        }
+    };
 
-int main() {
+    int main() {
 
-    LinkList<int> int_list;
-    int_list.displayList();
-    int_list.insertNode(3, 0);
-    int_list.insertNode(2, 0);
-    int_list.insertNode(1, 0);
-    int_list.insertNode(4, 3);
-    int_list.insertNode(3, 100);
-    int_list.displayList();
-    
-    cout<<"List Current Size = "<<int_list.size()<<endl;
+        LinkList<int> int_list;
+        int_list.displayList();
+        int_list.insertNode(3, 0);
+        int_list.insertNode(2, 0);
+        int_list.insertNode(1, 0);
+        int_list.insertNode(4, 3);
+        int_list.insertNode(3, 100);
+        int_list.sort();
+        int_list.displayList();
 
-    //reverseList
-    int_list.reverseList();
-    int_list.displayList();
+        cout<<"List Current Size = "<<int_list.size()<<endl;
 
-    //delete fuction
-    int_list.deleteNode(2);
-    int_list.deleteNode(3);
-    int_list.deleteNode(0);
-    int_list.displayList();
+        //reverseList
+        int_list.reverseList();
+        int_list.displayList();
 
-    //float
-    LinkList<float> float_list;
-    float_list.insertNode(4.5,0);
-    float_list.insertNode(5.5, 0);
-    float_list.insertNode(2.5, 1);
-    float_list.reverseList();
-    float_list.displayList();
+        //delete fuction
+        int_list.deleteNode(2);
+        int_list.deleteNode(3);
+        int_list.deleteNode(0);
+        int_list.displayList();
 
-    //char
-    LinkList<char> char_list;
-    char_list.insertNode('I', 0);
-    char_list.insertNode('R', 0);
-    char_list.insertNode('P', 100);
-    char_list.reverseList();
-    char_list.displayList();
+        //float
+        LinkList<float> float_list;
+        float_list.insertNode(4.5,0);
+        float_list.insertNode(5.5, 0);
+        float_list.insertNode(2.5, 1);
+        float_list.sort();
+        float_list.reverseList();
+        float_list.displayList();
 
-    return  0;
-}
+        //char
+        LinkList<char> char_list;
+        char_list.insertNode('I', 0);
+        char_list.insertNode('R', 0);
+        char_list.insertNode('P', 100);
+        char_list.reverseList();
+        char_list.sort();
+        char_list.displayList();
+
+        return  0;
+    }
