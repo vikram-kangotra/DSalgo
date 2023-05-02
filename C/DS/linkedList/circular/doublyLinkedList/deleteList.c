@@ -6,8 +6,8 @@ Node* deleteList (Node* tail) {
         while (temp != tail) {
             temp = temp->next;
             free(temp->prev);
-            free(tail);
         }
+        free(tail);
     }
 
     return NULL;
