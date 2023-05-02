@@ -11,10 +11,6 @@ A repository of almost all Data Structures and Algorithm in different programmin
 | <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3371 | 1006 | 193 | 5769 |
 | <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 2924 | 321 | 58 | 3682 |
 
-| <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 2924 | 321 | 58 | 3682 |
-
-| <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 1915 | 131 | 49 | 2275 |
-
 #### Formula Used
 `Score = Additions + 2 * (Deletions + Commits)`
 
