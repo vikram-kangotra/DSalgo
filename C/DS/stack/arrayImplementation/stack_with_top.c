@@ -10,7 +10,7 @@ void push(int data);
 int pop();
 int peek();
 
-//printing data in stack. Last element is top elemenit.
+//printing data in stack. Last element is top element.
 void print();
 int main() {
     int choice, data, flag = 1;
