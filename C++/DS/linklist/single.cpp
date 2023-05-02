@@ -3,9 +3,6 @@
  *
  * */
 
-
-
-
 #include <iostream>
 using namespace std;
 
@@ -62,9 +59,7 @@ class LinkList {
             newNode->next = temp->next;
             temp->next = newNode;
         }
-
         return head;
-
     }
 
     Node<T>* deleteNode(size_t index) {
@@ -109,9 +104,7 @@ class LinkList {
             }
             head = prevNode;
         } 
-
         return head;
-
     }
 
     Node<T>*  sort() {
