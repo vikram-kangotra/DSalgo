@@ -32,6 +32,9 @@ int main() {
     head = reverse(head);
     displayList(head);
 
+    //merge
+
+
     
     return 0;
 }
