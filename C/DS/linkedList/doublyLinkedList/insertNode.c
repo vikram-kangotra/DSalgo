@@ -9,6 +9,7 @@ Node* insertNode(Node* head, int data, size_t index) {
         head = newNode;
     } else if (index == 0) {
         newNode->next = head;
+        newNode->prev = NULL;
         head->prev = newNode;
         head = newNode;
     } else {

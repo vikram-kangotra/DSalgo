@@ -17,6 +17,10 @@ int main() {
     head = insert ( head, 2, 5 );
     head = insert(head, 11, 100);
     head = insert(head, 3, 23);
+
+    head = sort(head);
+    displayList(head);
+    
     head = deleteNode(head, 10000);
     head = deleteNode(head, 2);
 
@@ -27,6 +31,10 @@ int main() {
 
     head = reverse(head);
     displayList(head);
+
+    //merge
+
+
     
     return 0;
 }
