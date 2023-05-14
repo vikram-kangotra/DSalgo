@@ -7,7 +7,7 @@ A repository of almost all Data Structures and Algorithm in different programmin
 ## Top 3 Contributors
 | Contributors | Additions | Deletions | Commits | Score |
 |:-:|:-:|:-:|:-:|:-:|
-| <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 12353 | 6479 | 94 | 25499 |
+| <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 12357 | 6482 | 98 | 25517 |
 | <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3372 | 1007 | 194 | 5774 |
 | <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 2977 | 330 | 67 | 3771 |
 
