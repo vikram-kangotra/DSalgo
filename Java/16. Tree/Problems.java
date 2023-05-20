@@ -196,4 +196,41 @@ public class Problems {
         }
         return max;
     }
+
+    // Convert a Binary Tree to Doubly Linked List
+
+
+    // Convert Binary Tree from Inorder and Preorder Traversal
+
+    int preIndex = 0;
+
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return buildTree(preorder, inorder, 0, inorder.length - 1);
+    }
+
+    public TreeNode buildTree(int[] preorder, int[] inorder, int start, int end) {
+        if (start > end) {
+            return null;
+        }
+        TreeNode root = new TreeNode(preorder[preIndex++]);
+        if (start == end) {
+            return root;
+        }
+        int index = search(inorder, start, end, root.getData());
+        root.setLeft(buildTree(preorder, inorder, start, index - 1));
+        root.setRight(buildTree(preorder, inorder, index + 1, end));
+        return root;
+    }
+
+    public int search(int[] inorder, int start, int end, int data) {
+        int i;
+        for (i = start; i <= end; i++) {
+            if (inorder[i] == data) {
+                return i;
+            }
+        }
+        return i;
+    }
+
+    
 }
