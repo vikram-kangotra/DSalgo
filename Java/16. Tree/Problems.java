@@ -10,17 +10,16 @@ public class Problems {
         return 1 + Math.max(height(root.getLeft()), height(root.getRight()));
     }
 
-    // Diameter of Binary Tree
+    // Diameter of Binary Tree : The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two end nodes.
 
     public int diameter(TreeNode root) {
         if (root == null) {
             return 0;
         }
-        int leftHeight = height(root.getLeft());
-        int rightHeight = height(root.getRight());
-        int leftDiameter = diameter(root.getLeft());
-        int rightDiameter = diameter(root.getRight());
-        return Math.max(leftHeight + rightHeight + 1, Math.max(leftDiameter, rightDiameter));
+        int d1 = 1 + height(root.getLeft()) + height(root.getRight());
+        int d2 = diameter(root.getLeft());
+        int d3 = diameter(root.getRight());
+        return Math.max(d1, Math.max(d2, d3));
     }
 
     // Print nodes at distance k from root
@@ -232,5 +231,98 @@ public class Problems {
         return i;
     }
 
+    // Convert Binary Tree from Inorder and Postorder Traversal
+
+    int postIndex = 0;
+
+    public TreeNode buildTree2(int[] inorder, int[] postorder) {
+        return buildTree2(inorder, postorder, 0, inorder.length - 1);
+    }
+
+    public TreeNode buildTree2(int[] inorder, int[] postorder, int start, int end) {
+        if (start > end) {
+            return null;
+        }
+        TreeNode root = new TreeNode(postorder[postIndex--]);
+        if (start == end) {
+            return root;
+        }
+        int index = search(inorder, start, end, root.getData());
+        root.setRight(buildTree2(inorder, postorder, index + 1, end));
+        root.setLeft(buildTree2(inorder, postorder, start, index - 1));
+        return root;
+    }
+
+    // Construct Binary Tree from Preorder and Postorder Traversal
+
+    int preIndex2 = 0;
+
+    public TreeNode constructFromPrePost(int[] pre, int[] post) {
+        return constructFromPrePost(pre, post, 0, post.length - 1);
+    }
+
+    public TreeNode constructFromPrePost(int[] pre, int[] post, int start, int end) {
+        if (start > end) {
+            return null;
+        }
+        TreeNode root = new TreeNode(pre[preIndex2++]);
+        if (start == end) {
+            return root;
+        }
+        int index = search(post, start, end, pre[preIndex2]);
+        root.setLeft(constructFromPrePost(pre, post, start, index));
+        root.setRight(constructFromPrePost(pre, post, index + 1, end - 1));
+        return root;
+    }
+
+    // Construct Binary Tree from Inorder and Level Order Traversal
+
+    public TreeNode buildTree3(int[] inorder, int[] levelOrder) {
+        return buildTree3(inorder, levelOrder, 0, inorder.length - 1);
+    }
+
+    public TreeNode buildTree3(int[] inorder, int[] levelOrder, int start, int end) {
+        if (start > end) {
+            return null;
+        }
+        TreeNode root = new TreeNode(levelOrder[0]);
+        if (start == end) {
+            return root;
+        }
+        int index = search(inorder, start, end, root.getData());
+        int[] leftLevelOrder = new int[index - start];
+        int[] rightLevelOrder = new int[end - index];
+        int li = 0, ri = 0;
+        for (int i = 1; i < levelOrder.length; i++) {
+            if (search(inorder, start, index - 1, levelOrder[i]) != -1) {
+                leftLevelOrder[li++] = levelOrder[i];
+            } else {
+                rightLevelOrder[ri++] = levelOrder[i];
+            }
+        }
+        root.setLeft(buildTree3(inorder, leftLevelOrder, start, index - 1));
+        root.setRight(buildTree3(inorder, rightLevelOrder, index + 1, end));
+        return root;
+    }
+
+    // Lowest Common Ancestor in a Binary Tree: The lowest common ancestor between two nodes n1 and n2 is defined as the lowest node in T that has both n1 and n2 as descendants.
+
+    public TreeNode lca(TreeNode root, int n1, int n2) {
+        if (root == null) {
+            return null;
+        }
+        if (root.getData() == n1 || root.getData() == n2) {
+            return root;
+        }
+        TreeNode leftLca = lca(root.getLeft(), n1, n2);
+        TreeNode rightLca = lca(root.getRight(), n1, n2);
+        if (leftLca != null && rightLca != null) {
+            return root;
+        }
+        return (leftLca != null) ? leftLca : rightLca;
+    }
+
     
+
+
 }
