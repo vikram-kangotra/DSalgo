@@ -17,6 +17,10 @@ int main() {
     head = insert ( head, 2, 5 );
     head = insert(head, 11, 100);
     head = insert(head, 3, 23);
+
+    head = sort(head);
+    displayList(head);
+    
     head = deleteNode(head, 10000);
     head = deleteNode(head, 2);
 
@@ -24,6 +28,13 @@ int main() {
 
     displayReversedList(head);
     printf("\n");//it is required to break the line, it cann't be included in recursive-fuction.
+
+    head = reverse(head);
+    displayList(head);
+
+    //merge
+
+
     
     return 0;
 }
