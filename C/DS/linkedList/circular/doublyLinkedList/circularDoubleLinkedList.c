@@ -10,9 +10,9 @@ void  circularDoubleLinkedList(){
 
         printf("\n 1. Insert data in list.\n");
         printf("\n 2. Delete data from list.\n");
-        printf("\n 3. Delete list.\n");
-        printf("\n 4. Display  list.\n");
-        printf("\n 5. Display reversed list.\n");
+        printf("\n 3. Display  list.\n");
+        printf("\n 4. Delete list.\n");
+        printf("\n 5. Reverse the  list.\n");
         printf("\n 6. Quit.\n");
 
         printf("\nEnter your choice: ");
@@ -28,26 +28,32 @@ void  circularDoubleLinkedList(){
                 break;
 
             case 2:
-               
+                if(tail != NULL) { 
                 printf("\nEnter the index from  where data has to be deleted from List: ");
                 scanf("%zu", &index);
                 tail = deleteNode(tail, index);
+                } else {
+                    printf("List is empty!\n");
+                }
                 break;
 
             case 3:
-                tail = deleteList(tail);
+                displayList(tail);
                 break;
             case 4:
-                displayList(tail);
+                tail = deleteList(tail);
                 break;
 
             case 5:
-                displayReversedList(tail);
+                tail = reverseList(tail);
                 break;
 
             case 6:
                 flag = 0;
                 break;
+             
+            default:
+                printf("Invalid Entry!\n");
         }
 
     }
