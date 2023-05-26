@@ -1,8 +1,8 @@
 #include "traversal.h"
 
-struct Tree * insertData(int data) {
+TreeNode* insertData(int data) {
 
-    struct Tree * root = malloc(sizeof(struct Tree));
+    TreeNode * root = malloc(sizeof(TreeNode));
     root->data = data;
     root->left = NULL;
     root->right = NULL;
@@ -12,7 +12,7 @@ struct Tree * insertData(int data) {
 
 int main() {
 
-    struct Tree* root = malloc(sizeof(struct Tree));
+    TreeNode* root = malloc(sizeof(TreeNode));
 
     root = insertData(0);
     root->left = insertData(2);

@@ -1,8 +1,8 @@
-struct Tree {
+TreeNode {
 
     int data;
     
-    struct Tree* left;
-    struct Tree* right;
+    TreeNode* left;
+    TreeNode* right;
 
 };
