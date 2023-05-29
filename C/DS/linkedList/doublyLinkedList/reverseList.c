@@ -18,7 +18,6 @@ Node* reverseList(Node* head)
         head = temp->prev; //because temp points to second last node and this node have address of last node in prev part.
     }
 
-
     return head;
 
 }
