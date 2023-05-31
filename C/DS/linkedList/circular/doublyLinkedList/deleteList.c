@@ -9,6 +9,7 @@ Node* deleteList (Node* tail) {
         }
         free(tail);
     }
+    printf("List is deleted!\n");
 
     return NULL;
 }
