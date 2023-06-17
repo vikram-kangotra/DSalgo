@@ -56,7 +56,6 @@ void insertElement(int element) {
             return;
         }
     }
-
 }
 
 void deleteElement(int element){
