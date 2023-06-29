@@ -23,8 +23,10 @@ Node* deleteNode (Node* tail, size_t index) {
         }
 
         delNode = temp->next;
-        if(delNode == tail)
-            tail = delNode;
+
+        if(delNode == tail) 
+            tail = delNode->prev;
+            
         temp->next = delNode->next;
         delNode->next->prev = temp;
         free(delNode);

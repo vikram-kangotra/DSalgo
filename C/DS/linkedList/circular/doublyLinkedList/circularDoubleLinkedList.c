@@ -55,6 +55,7 @@ void  circularDoubleLinkedList(){
             default:
                 printf("Invalid Entry!\n");
         }
+        getchar();
 
     }
 }

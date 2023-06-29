@@ -1,5 +1,6 @@
 #include "node.h"
 #include <stdlib.h>
+struct Node* createNode(int data);
 
 struct Node* insert (struct Node* head, size_t index, int data);
 
