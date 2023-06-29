@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "node.h"
 
+Node* createNode(int data);
+
 void circularDoubleLinkedList();
 
 Node* insertNode (Node* tail, int data, size_t index);
