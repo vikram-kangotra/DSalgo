@@ -3,72 +3,30 @@
 
 #include "../graph.h"
 
-void init_graph(Graph *g, int n) {
-    g->vertex_count = n;
-    g->matrix = (int**) malloc(n * sizeof(int*));
-    for (int i = 0; i < n; i++) {
-        g->matrix[i] = (int*) malloc(n * sizeof(int));
-        for (int j = 0; j < n; j++) {
-            g->matrix[i][j] = 0;
-        }
-    }
-}
-
-void graph_add_edge(Graph *g, int u, int v, int w) {
-    g->matrix[u][v] = w;
-    g->matrix[v][u] = w;
-}
-
-void graph_remove_edge(Graph *g, int u, int v) {
-    g->matrix[u][v] = 0;
-    g->matrix[v][u] = 0;
-}
-
-int graph_has_edge(Graph *g, int u, int v) {
-    return g->matrix[u][v] != 0;
-}
-
-EdgeList graph_get_edges(Graph *g) {
-    EdgeList list;
-    list.count = 0;
-    for (int i = 0; i < g->vertex_count; i++) {
-        for (int j = i + 1; j < g->vertex_count; j++) {
-            if (graph_has_edge(g, i, j)) {
-                list.edge[list.count].u = i;
-                list.edge[list.count].v = j;
-                list.edge[list.count].w = g->matrix[i][j];
-                list.count++;
-            }
-        }
-    }
-    return list;
-}
-
 int compare(const void* a, const void* b) {
     Edge* e1 = (Edge*) a;
     Edge* e2 = (Edge*) b;
     return e1->w - e2->w;
 }
 
-EdgeList kurskal(Graph* g) {
-    EdgeList list = graph_get_edges(g);
-    qsort(list.edge, list.count, sizeof(Edge), compare);
+Vector kurskal(Graph* g) {
+    Vector list = graph_get_edges(g);
+    vector_sort(&list, compare);
 
-    EdgeList result;
+    Vector result;
+    vector_init_with_type(&result, Edge, list.size);
 
-    int parent[MAX];
+    int parent[list.size];
     for (int i = 0; i < g->vertex_count; i++) {
         parent[i] = i;
     }
 
-    result.count = 0;
-    for (int i = 0; i < list.count; i++) {
-        Edge e = list.edge[i];
-        if (parent[e.u] != parent[e.v]) {
-            result.edge[result.count] = e;
-            result.count++;
-            int old_parent = parent[e.u];
-            int new_parent = parent[e.v];
+    for (int i = 0; i < list.size; i++) {
+        Edge* e = (Edge*) vector_get(&list, i);
+        if (parent[e->u] != parent[e->v]) {
+            vector_push(&result, e);
+            int old_parent = parent[e->u];
+            int new_parent = parent[e->v];
             for (int j = 0; j < g->vertex_count; j++) {
                 if (parent[j] == old_parent) {
                     parent[j] = new_parent;
@@ -92,10 +50,11 @@ int main() {
     graph_add_edge(&graph, 1, 4, 8);
     graph_add_edge(&graph, 2, 4, 10);
 
-    EdgeList list = kurskal(&graph);
+    Vector list = kurskal(&graph);
 
-    for (int i = 0; i < list.count; i++) {
-        printf("%d %d %d\n", list.edge[i].u, list.edge[i].v, list.edge[i].w);
+    for (int i = 0; i < list.size; i++) {
+        Edge* e = (Edge*) vector_get(&list, i);
+        printf("%d %d %d\n", e->u, e->v, e->w);
     }
 
     return 0;
