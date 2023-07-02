@@ -8,8 +8,8 @@ A repository of almost all Data Structures and Algorithm in different programmin
 | Contributors | Additions | Deletions | Commits | Score |
 |:-:|:-:|:-:|:-:|:-:|
 | <a href='https://github.com/Shubh-1-am'><figure><img src='https://avatars.githubusercontent.com/u/104207247?v=4' width='64'/><br><figcaption>Shubh-1-am</figcaption></figure></a> | 12979 | 6492 | 106 | 26175 |
-| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3707 | 1118 | 211 | 6365 |
-| <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 4976 | 552 | 89 | 6258 |
+| <a href='https://github.com/vikram-kangotra'><figure><img src='https://avatars.githubusercontent.com/u/61800198?v=4' width='64'/><br><figcaption>vikram-kangotra</figcaption></figure></a> | 3765 | 1120 | 213 | 6431 |
+| <a href='https://github.com/Itz-Verma'><figure><img src='https://avatars.githubusercontent.com/u/104369577?v=4' width='64'/><br><figcaption>Itz-Verma</figcaption></figure></a> | 4976 | 553 | 90 | 6262 |
 
 #### Formula Used
 `Score = Additions + 2 * (Deletions + Commits)`
