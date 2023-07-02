@@ -50,6 +50,14 @@ size_t vector_get_capacity(Vector* vector) {
     return vector->capacity;
 }
 
+void vector_set(Vector* vector, size_t index, void* data) {
+    if (index >= vector->size) {
+        return;
+    }
+    
+    memcpy(vector->data + index * vector->block_size, data, vector->block_size);
+}
+
 void vector_set_data(Vector* vector, void* data, size_t size) {
     vector->size = size;
     vector->capacity = size;
@@ -73,4 +81,8 @@ void vector_reserve(Vector* vector, size_t capacity) {
 void vector_shrink_to_fit(Vector* vector) {
     vector->capacity = vector->size;
     vector->data = realloc(vector->data, vector->block_size * vector->capacity);
+}
+
+void vector_sort(Vector* vector, int (*comparator)(const void*, const void*)) {
+    qsort(vector->data, vector->size, vector->block_size, comparator);
 }

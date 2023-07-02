@@ -20,7 +20,10 @@ void* vector_pop(Vector* vector);
 void* vector_get(Vector* vector, size_t index);
 size_t vector_get_size(Vector* vector);
 size_t vector_get_capacity(Vector* vector);
+void vector_set(Vector* vector, size_t index, void* data);
 void vector_set_data(Vector* vector, void* data, size_t size);
 void vector_clear(Vector* vector);
 void vector_reserve(Vector* vector, size_t capacity);
 void vector_shrink_to_fit(Vector* vector);
+
+void vector_sort(Vector* vector, int (*comparator)(const void*, const void*));
