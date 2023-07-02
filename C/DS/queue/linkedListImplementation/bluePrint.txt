@@ -1,0 +1,6 @@
+it will have a front and rear.
+front will deque and rear will enque.
+These will ensure that operation in O(1).
+
+createQueue,enqueue,dequeue,peek,display, reverse.
+will pass structure Queue by reference so that I can use Q->front and Q->rear in the function call.

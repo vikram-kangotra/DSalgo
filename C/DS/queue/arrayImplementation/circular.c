@@ -10,7 +10,7 @@ int rear = -1;
 void enQueue(int);
 int deQueue();
 bool isEmpty() { return front == -1; }
-bool  isFull() { return ( (front == 0 && rear == (MAXSIZE - 1) ) || (rear == front - 1) % (MAXSIZE - 1) ) ? true : false; }
+bool  isFull() { return ( (front == 0 && rear == (MAXSIZE - 1) ) || rear == (front - 1) % (MAXSIZE - 1) ) ? true : false; }
 //print element of queue
 void printQ();
 
