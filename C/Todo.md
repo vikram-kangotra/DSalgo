@@ -32,7 +32,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Topological Sort Algo
     - [] Flood Fill Algo
     - [] Lee Algo
-    - [] Prim's Algo
+    - [x] Prim's Algo
     - [] Boruvka's Algo
     - [] Johnson's Algo
     - [] Kosaraju's Algo
