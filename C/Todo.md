@@ -25,7 +25,7 @@ The checkbox needs to be checked after adding any DS or A in the respective fold
     - [] Pigeonhole Sort
     - [] Cycle Sort
 - [] Graph
-    - [] Kruskal's Algo
+    - [x] Kruskal's Algo
     - [] Dijkstra's Algo
     - [] Bellman Ford Algo
     - [] Floyd Warshall Algo
