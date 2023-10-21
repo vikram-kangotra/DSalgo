@@ -1,5 +1,8 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "node.h"
+
+Node* createNode(int data);
 
 void circularDoubleLinkedList();
 
@@ -11,4 +14,4 @@ Node* deleteList (Node* tail);
 
 void displayList (Node* tail);
 
-void displayReversedList (Node* tail);
+Node* reverseList (Node* tail);

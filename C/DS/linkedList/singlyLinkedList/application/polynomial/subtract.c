@@ -6,7 +6,6 @@ struct Node* subtract (struct Node* head1, struct Node* head2) {
     if (head1 == NULL || head2 == NULL)
         return NULL;
 
-
     struct Node* sub_head = NULL;
     struct Node* temp1 = head1;
     struct Node* temp2 = head2;

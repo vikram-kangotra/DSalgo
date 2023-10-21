@@ -5,7 +5,7 @@
 int main() {
     
     struct Node* head = NULL;
-    head = ( struct Node* ) malloc(sizeof(struct Node*));
+    head = ( struct Node* ) malloc(sizeof(struct Node));
 
     int data = 3;
     head->data = data;
@@ -27,14 +27,10 @@ int main() {
     displayList(head);
 
     displayReversedList(head);
-    printf("\n");//it is required to break the line, it cann't be included in recursive-fuction.
+    printf("\n");
 
     head = reverse(head);
     displayList(head);
-
-    //merge
-
-
     
     return 0;
 }

@@ -1,10 +1,8 @@
-#include <stdlib.h>
-#include "node.h"
+#include "linkedList.h"
 
 struct Node* insert (struct Node* head, size_t index, int data) {
 
-    struct Node* newNode = malloc(sizeof(struct Node));
-    newNode->data = data;
+    struct Node* newNode = createNode(data);
 
     if (head == NULL || index == 0) {
         newNode->next = head;
